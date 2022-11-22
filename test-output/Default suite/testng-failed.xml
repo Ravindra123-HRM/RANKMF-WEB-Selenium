@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.Test.Rankmfselenium.NormalSiporderTest">
+        <methods>
+          <include name="Click_sipcontinuebtn"/>
+          <include name="SetInitialization"/>
+          <include name="Clickon_TotalInvestmentvalue"/>
+          <include name="Startdatepicker"/>
+          <include name="Clickon_logout"/>
+          <include name="search_mutualfunds"/>
+          <include name="Clickon_skipstep"/>
+          <include name="FetchOrderPlaceText_NormalSIP"/>
+          <include name="Click_Normalsip"/>
+          <include name="ClickonSigninPage"/>
+          <include name="Click_logoutbtn"/>
+          <include name="check_enterotpnum"/>
+          <include name="Click_continuebtn"/>
+          <include name="Clickon_confirmcontinue"/>
+          <include name="check_VerifyOTP"/>
+          <include name="InstallementStartdate"/>
+          <include name="Click_HomePage"/>
+          <include name="Clickon_cancelsmartSiporder"/>
+        </methods>
+      </class> <!-- com.Test.Rankmfselenium.NormalSiporderTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

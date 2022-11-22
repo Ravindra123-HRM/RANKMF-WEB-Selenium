@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="33" passed="28" failed="1" skipped="4">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-11-11T17:20:17 IST" name="Suite" finished-at="2022-11-11T17:22:14 IST" duration-ms="117132">
+    <groups>
+      <group name="Regression">
+        <method signature="NormalSiporderTest.ClickonSigninPage()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" name="ClickonSigninPage" class="com.Test.Rankmfselenium.NormalSiporderTest"/>
+        <method signature="NormalSiporderTest.Clickon_TotalInvestmentvalue()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" name="Clickon_TotalInvestmentvalue" class="com.Test.Rankmfselenium.NormalSiporderTest"/>
+        <method signature="NormalSiporderTest.Click_HomePage()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" name="Click_HomePage" class="com.Test.Rankmfselenium.NormalSiporderTest"/>
+        <method signature="NormalSiporderTest.search_mutualfunds()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" name="search_mutualfunds" class="com.Test.Rankmfselenium.NormalSiporderTest"/>
+        <method signature="NormalSiporderTest.Click_Normalsip()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" name="Click_Normalsip" class="com.Test.Rankmfselenium.NormalSiporderTest"/>
+        <method signature="NormalSiporderTest.Click_sipcontinuebtn()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" name="Click_sipcontinuebtn" class="com.Test.Rankmfselenium.NormalSiporderTest"/>
+        <method signature="NormalSiporderTest.InstallementStartdate()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" name="InstallementStartdate" class="com.Test.Rankmfselenium.NormalSiporderTest"/>
+        <method signature="NormalSiporderTest.Startdatepicker()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" name="Startdatepicker" class="com.Test.Rankmfselenium.NormalSiporderTest"/>
+        <method signature="NormalSiporderTest.Click_continuebtn()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" name="Click_continuebtn" class="com.Test.Rankmfselenium.NormalSiporderTest"/>
+        <method signature="NormalSiporderTest.check_VerifyOTP()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" name="check_VerifyOTP" class="com.Test.Rankmfselenium.NormalSiporderTest"/>
+        <method signature="NormalSiporderTest.check_enterotpnum()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" name="check_enterotpnum" class="com.Test.Rankmfselenium.NormalSiporderTest"/>
+        <method signature="NormalSiporderTest.Clickon_confirmcontinue()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" name="Clickon_confirmcontinue" class="com.Test.Rankmfselenium.NormalSiporderTest"/>
+        <method signature="NormalSiporderTest.FetchOrderPlaceText_NormalSIP()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" name="FetchOrderPlaceText_NormalSIP" class="com.Test.Rankmfselenium.NormalSiporderTest"/>
+        <method signature="NormalSiporderTest.Clickon_skipstep()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" name="Clickon_skipstep" class="com.Test.Rankmfselenium.NormalSiporderTest"/>
+        <method signature="NormalSiporderTest.Clickon_cancelsmartSiporder()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" name="Clickon_cancelsmartSiporder" class="com.Test.Rankmfselenium.NormalSiporderTest"/>
+        <method signature="NormalSiporderTest.Clickon_logout()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" name="Clickon_logout" class="com.Test.Rankmfselenium.NormalSiporderTest"/>
+        <method signature="NormalSiporderTest.Click_logoutbtn()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" name="Click_logoutbtn" class="com.Test.Rankmfselenium.NormalSiporderTest"/>
+        <method signature="NormalSmartsiporderTest.ClickonSigninPage()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" name="ClickonSigninPage" class="com.Test.Rankmfselenium.NormalSmartsiporderTest"/>
+        <method signature="NormalSmartsiporderTest.Clickon_TotalInvestmentvalue()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" name="Clickon_TotalInvestmentvalue" class="com.Test.Rankmfselenium.NormalSmartsiporderTest"/>
+        <method signature="NormalSmartsiporderTest.Click_Investsmartsip()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" name="Click_Investsmartsip" class="com.Test.Rankmfselenium.NormalSmartsiporderTest"/>
+        <method signature="NormalSmartsiporderTest.Click_SmartSip()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" name="Click_SmartSip" class="com.Test.Rankmfselenium.NormalSmartsiporderTest"/>
+        <method signature="NormalSmartsiporderTest.click_continue()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" name="click_continue" class="com.Test.Rankmfselenium.NormalSmartsiporderTest"/>
+        <method signature="NormalSmartsiporderTest.Installementdate()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" name="Installementdate" class="com.Test.Rankmfselenium.NormalSmartsiporderTest"/>
+        <method signature="NormalSmartsiporderTest.InstallementStartdate()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" name="InstallementStartdate" class="com.Test.Rankmfselenium.NormalSmartsiporderTest"/>
+        <method signature="NormalSmartsiporderTest.Clickalert()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" name="Clickalert" class="com.Test.Rankmfselenium.NormalSmartsiporderTest"/>
+        <method signature="NormalSmartsiporderTest.check_VerifyOTP()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" name="check_VerifyOTP" class="com.Test.Rankmfselenium.NormalSmartsiporderTest"/>
+        <method signature="NormalSmartsiporderTest.check_enterotpnum()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" name="check_enterotpnum" class="com.Test.Rankmfselenium.NormalSmartsiporderTest"/>
+        <method signature="NormalSmartsiporderTest.Clickon_confirmcontinue()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" name="Clickon_confirmcontinue" class="com.Test.Rankmfselenium.NormalSmartsiporderTest"/>
+        <method signature="NormalSmartsiporderTest.FetchOrderPlaceText_SmartSIP()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" name="FetchOrderPlaceText_SmartSIP" class="com.Test.Rankmfselenium.NormalSmartsiporderTest"/>
+        <method signature="NormalSmartsiporderTest.Clickon_cancelsmartsiporder()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" name="Clickon_cancelsmartsiporder" class="com.Test.Rankmfselenium.NormalSmartsiporderTest"/>
+        <method signature="NormalSmartsiporderTest.Clickon_logout()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" name="Clickon_logout" class="com.Test.Rankmfselenium.NormalSmartsiporderTest"/>
+        <method signature="NormalSmartsiporderTest.Click_logoutbtn()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" name="Click_logoutbtn" class="com.Test.Rankmfselenium.NormalSmartsiporderTest"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test started-at="2022-11-11T17:20:17 IST" name="NormalSiporder" finished-at="2022-11-11T17:21:08 IST" duration-ms="51576">
+      <class name="com.Test.Rankmfselenium.NormalSiporderTest">
+        <test-method is-config="true" signature="SetInitialization()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" started-at="2022-11-11T17:20:17 IST" name="SetInitialization" finished-at="2022-11-11T17:20:25 IST" duration-ms="8637" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetInitialization -->
+        <test-method signature="ClickonSigninPage()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" started-at="2022-11-11T17:20:25 IST" name="ClickonSigninPage" finished-at="2022-11-11T17:20:26 IST" duration-ms="731" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickonSigninPage -->
+        <test-method signature="Clickon_TotalInvestmentvalue()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" started-at="2022-11-11T17:20:26 IST" name="Clickon_TotalInvestmentvalue" finished-at="2022-11-11T17:20:29 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSiporderTest.ClickonSigninPage" duration-ms="3272" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Clickon_TotalInvestmentvalue -->
+        <test-method signature="Click_HomePage()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" started-at="2022-11-11T17:20:29 IST" name="Click_HomePage" finished-at="2022-11-11T17:20:32 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSiporderTest.Clickon_TotalInvestmentvalue" duration-ms="2720" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Click_HomePage -->
+        <test-method signature="search_mutualfunds()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" started-at="2022-11-11T17:20:32 IST" name="search_mutualfunds" finished-at="2022-11-11T17:20:40 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSiporderTest.Click_HomePage" duration-ms="8008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search_mutualfunds -->
+        <test-method signature="Click_Normalsip()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" started-at="2022-11-11T17:20:40 IST" name="Click_Normalsip" finished-at="2022-11-11T17:20:46 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSiporderTest.search_mutualfunds" duration-ms="6327" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Click_Normalsip -->
+        <test-method signature="Click_sipcontinuebtn()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" started-at="2022-11-11T17:20:46 IST" name="Click_sipcontinuebtn" finished-at="2022-11-11T17:20:49 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSiporderTest.Click_Normalsip" duration-ms="2336" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Click_sipcontinuebtn -->
+        <test-method signature="InstallementStartdate()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" started-at="2022-11-11T17:20:49 IST" name="InstallementStartdate" finished-at="2022-11-11T17:20:52 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSiporderTest.Click_sipcontinuebtn" duration-ms="3212" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InstallementStartdate -->
+        <test-method signature="Startdatepicker()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" started-at="2022-11-11T17:20:52 IST" name="Startdatepicker" finished-at="2022-11-11T17:20:56 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSiporderTest.InstallementStartdate" duration-ms="3873" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Startdatepicker -->
+        <test-method signature="Click_continuebtn()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" started-at="2022-11-11T17:20:56 IST" name="Click_continuebtn" finished-at="2022-11-11T17:20:58 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSiporderTest.Startdatepicker" duration-ms="2147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Click_continuebtn -->
+        <test-method signature="check_VerifyOTP()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" started-at="2022-11-11T17:20:58 IST" name="check_VerifyOTP" finished-at="2022-11-11T17:21:00 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSiporderTest.Click_continuebtn" duration-ms="2253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_VerifyOTP -->
+        <test-method signature="check_enterotpnum()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" started-at="2022-11-11T17:21:00 IST" name="check_enterotpnum" finished-at="2022-11-11T17:21:03 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSiporderTest.check_VerifyOTP" duration-ms="2522" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_enterotpnum -->
+        <test-method signature="Clickon_confirmcontinue()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" started-at="2022-11-11T17:21:03 IST" name="Clickon_confirmcontinue" finished-at="2022-11-11T17:21:05 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSiporderTest.check_enterotpnum" duration-ms="2120" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Clickon_confirmcontinue -->
+        <test-method signature="FetchOrderPlaceText_NormalSIP()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" started-at="2022-11-11T17:21:05 IST" name="FetchOrderPlaceText_NormalSIP" finished-at="2022-11-11T17:21:08 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSiporderTest.Clickon_confirmcontinue" duration-ms="3057" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='main_msg_success']/div/p"}
+  (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-KMVAA5F', ip: '192.168.80.50', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\samco\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59291}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 49211fb3e6b851c6747f26f9fb25e477
+*** Element info: {Using=xpath, value=//*[@id='main_msg_success']/div/p}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='main_msg_success']/div/p"}
+  (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-KMVAA5F', ip: '192.168.80.50', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\samco\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59291}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 49211fb3e6b851c6747f26f9fb25e477
+*** Element info: {Using=xpath, value=//*[@id='main_msg_success']/div/p}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at com.Test.RANKMFSELENIUM.BasketAction.fetchnormalpalcedorder(BasketAction.java:94)
+at com.Test.Rankmfselenium.NormalSiporderTest.FetchOrderPlaceText_NormalSIP(NormalSiporderTest.java:138)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FetchOrderPlaceText_NormalSIP -->
+        <test-method signature="Clickon_skipstep()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" started-at="2022-11-11T17:21:08 IST" name="Clickon_skipstep" finished-at="2022-11-11T17:21:08 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSiporderTest.FetchOrderPlaceText_NormalSIP" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method NormalSiporderTest.Clickon_skipstep()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method NormalSiporderTest.Clickon_skipstep()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Clickon_skipstep -->
+        <test-method signature="Clickon_cancelsmartSiporder()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" started-at="2022-11-11T17:21:08 IST" name="Clickon_cancelsmartSiporder" finished-at="2022-11-11T17:21:08 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSiporderTest.Clickon_skipstep" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method NormalSiporderTest.Clickon_cancelsmartSiporder()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method NormalSiporderTest.Clickon_cancelsmartSiporder()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Clickon_cancelsmartSiporder -->
+        <test-method signature="Clickon_logout()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" started-at="2022-11-11T17:21:08 IST" name="Clickon_logout" finished-at="2022-11-11T17:21:08 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSiporderTest.Clickon_cancelsmartSiporder" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method NormalSiporderTest.Clickon_logout()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method NormalSiporderTest.Clickon_logout()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Clickon_logout -->
+        <test-method signature="Click_logoutbtn()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03]" started-at="2022-11-11T17:21:08 IST" name="Click_logoutbtn" finished-at="2022-11-11T17:21:08 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSiporderTest.Clickon_logout" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method NormalSiporderTest.Click_logoutbtn()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method NormalSiporderTest.Click_logoutbtn()[pri:0, instance:com.Test.Rankmfselenium.NormalSiporderTest@68702e03] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Click_logoutbtn -->
+      </class> <!-- com.Test.Rankmfselenium.NormalSiporderTest -->
+    </test> <!-- NormalSiporder -->
+    <test started-at="2022-11-11T17:21:09 IST" name="NormalSmartsiporder" finished-at="2022-11-11T17:22:05 IST" duration-ms="56164">
+      <class name="com.Test.Rankmfselenium.NormalSmartsiporderTest">
+        <test-method is-config="true" signature="SetInitialization()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" started-at="2022-11-11T17:21:09 IST" name="SetInitialization" finished-at="2022-11-11T17:21:13 IST" duration-ms="4962" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetInitialization -->
+        <test-method signature="ClickonSigninPage()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" started-at="2022-11-11T17:21:13 IST" name="ClickonSigninPage" finished-at="2022-11-11T17:21:14 IST" duration-ms="698" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickonSigninPage -->
+        <test-method signature="Clickon_TotalInvestmentvalue()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" started-at="2022-11-11T17:21:14 IST" name="Clickon_TotalInvestmentvalue" finished-at="2022-11-11T17:21:18 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSmartsiporderTest.ClickonSigninPage" duration-ms="3469" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Clickon_TotalInvestmentvalue -->
+        <test-method signature="Click_Investsmartsip()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" started-at="2022-11-11T17:21:18 IST" name="Click_Investsmartsip" finished-at="2022-11-11T17:21:21 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSmartsiporderTest.Clickon_TotalInvestmentvalue" duration-ms="3187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Click_Investsmartsip -->
+        <test-method signature="Click_SmartSip()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" started-at="2022-11-11T17:21:21 IST" name="Click_SmartSip" finished-at="2022-11-11T17:21:23 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSmartsiporderTest.Click_Investsmartsip" duration-ms="2177" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Click_SmartSip -->
+        <test-method signature="click_continue()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" started-at="2022-11-11T17:21:23 IST" name="click_continue" finished-at="2022-11-11T17:21:31 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSmartsiporderTest.Click_SmartSip" duration-ms="7908" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- click_continue -->
+        <test-method signature="Installementdate()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" started-at="2022-11-11T17:21:31 IST" name="Installementdate" finished-at="2022-11-11T17:21:34 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSmartsiporderTest.click_continue" duration-ms="3150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Installementdate -->
+        <test-method signature="InstallementStartdate()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" started-at="2022-11-11T17:21:34 IST" name="InstallementStartdate" finished-at="2022-11-11T17:21:37 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSmartsiporderTest.Installementdate" duration-ms="2701" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InstallementStartdate -->
+        <test-method signature="Clickalert()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" started-at="2022-11-11T17:21:37 IST" name="Clickalert" finished-at="2022-11-11T17:21:39 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSmartsiporderTest.InstallementStartdate" duration-ms="2171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Clickalert -->
+        <test-method signature="check_VerifyOTP()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" started-at="2022-11-11T17:21:39 IST" name="check_VerifyOTP" finished-at="2022-11-11T17:21:41 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSmartsiporderTest.Clickalert" duration-ms="2232" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_VerifyOTP -->
+        <test-method signature="check_enterotpnum()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" started-at="2022-11-11T17:21:41 IST" name="check_enterotpnum" finished-at="2022-11-11T17:21:44 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSmartsiporderTest.check_VerifyOTP" duration-ms="2406" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_enterotpnum -->
+        <test-method signature="Clickon_confirmcontinue()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" started-at="2022-11-11T17:21:44 IST" name="Clickon_confirmcontinue" finished-at="2022-11-11T17:21:46 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSmartsiporderTest.check_enterotpnum" duration-ms="2111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Clickon_confirmcontinue -->
+        <test-method signature="FetchOrderPlaceText_SmartSIP()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" started-at="2022-11-11T17:21:46 IST" name="FetchOrderPlaceText_SmartSIP" finished-at="2022-11-11T17:21:49 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSmartsiporderTest.Clickon_confirmcontinue" duration-ms="3107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FetchOrderPlaceText_SmartSIP -->
+        <test-method signature="Clickon_cancelsmartsiporder()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" started-at="2022-11-11T17:21:49 IST" name="Clickon_cancelsmartsiporder" finished-at="2022-11-11T17:21:59 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSmartsiporderTest.FetchOrderPlaceText_SmartSIP" duration-ms="9890" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Clickon_cancelsmartsiporder -->
+        <test-method signature="Clickon_logout()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" started-at="2022-11-11T17:21:59 IST" name="Clickon_logout" finished-at="2022-11-11T17:22:02 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSmartsiporderTest.Clickon_cancelsmartsiporder" duration-ms="3177" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Clickon_logout -->
+        <test-method signature="Click_logoutbtn()[pri:0, instance:com.Test.Rankmfselenium.NormalSmartsiporderTest@7a1a14a4]" started-at="2022-11-11T17:22:02 IST" name="Click_logoutbtn" finished-at="2022-11-11T17:22:05 IST" depends-on-methods="com.Test.Rankmfselenium.NormalSmartsiporderTest.Clickon_logout" duration-ms="2794" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Click_logoutbtn -->
+      </class> <!-- com.Test.Rankmfselenium.NormalSmartsiporderTest -->
+    </test> <!-- NormalSmartsiporder -->
+    <test started-at="2022-11-11T17:22:05 IST" name="Email_send" finished-at="2022-11-11T17:22:14 IST" duration-ms="8863">
+      <class name="com.Test.Rankmfselenium.Email_sendTest">
+        <test-method signature="Email_sendnotification()[pri:0, instance:com.Test.Rankmfselenium.Email_sendTest@38089a5a]" started-at="2022-11-11T17:22:05 IST" name="Email_sendnotification" finished-at="2022-11-11T17:22:14 IST" duration-ms="8862" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Email_sendnotification -->
+      </class> <!-- com.Test.Rankmfselenium.Email_sendTest -->
+    </test> <!-- Email_send -->
+  </suite> <!-- Suite -->
+</testng-results>

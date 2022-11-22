@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+<listener class-name="RankmfBase.Listeners"/>
+
+</listeners>
+
+   <test thread-count="5" name="BasketLumpsumorder"> 
+    <classes>
+    <class name="com.Test.Rankmfselenium.BasketLumpsum_NEFTTest"/>
+     </classes>
+  </test>
+
+<test thread-count="5" name="BasketLumpsumorder_NetBanking"> 
+    <classes>
+    <class name="com.Test.Rankmfselenium.BasketlumpsumOrderNetBankingTest"/>
+     </classes>
+  </test>
+
+<test thread-count="5" name="Normal_lumpsumNetbanking"> 
+    <classes>
+    <class name="com.Test.Rankmfselenium.Normal_lumpsumNetbankingTest"/>
+     </classes>
+  </test>
+
+  <test thread-count="5" name="Email_send"> 
+    <classes>
+    <class name="com.Test.Rankmfselenium.Email_sendTest"/>
+ </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

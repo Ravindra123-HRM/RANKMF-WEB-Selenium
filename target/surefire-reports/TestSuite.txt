@@ -1,0 +1,44 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 55, Failures: 3, Errors: 0, Skipped: 15, Time elapsed: 173.146 sec <<< FAILURE! - in TestSuite
+check_fetchlumpsumsiptext(com.Test.Rankmfselenium.BasketSIPOrder)  Time elapsed: 3.445 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//p[contains(text(),'Your monthly SIP order for Investment of')]"}
+  (Session info: chrome=101.0.4951.54)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-KMVAA5F', ip: '172.19.19.141', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\samco\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55159}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 944752369a9bb029ab151319fedcb2d9
+*** Element info: {Using=xpath, value=//p[contains(text(),'Your monthly SIP order for Investment of')]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.Test.RANKMFSELENIUM.DashboardBasketSiporder.fetchlumpsumsiptext(DashboardBasketSiporder.java:118)
+	at com.Test.Rankmfselenium.BasketSIPOrder.check_fetchlumpsumsiptext(BasketSIPOrder.java:99)
+
+check_enterotpnum(com.Test.Rankmfselenium.BasketSmartsiporderTest)  Time elapsed: 2.48 sec  <<< FAILURE!
+java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
+	at com.Test.RANKMFSELENIUM.BasketAction.Enterotpnumber(BasketAction.java:38)
+	at com.Test.Rankmfselenium.BasketSmartsiporderTest.check_enterotpnum(BasketSmartsiporderTest.java:113)
+
+check_enterotpnum(com.Test.Rankmfselenium.BasketNormalSiporderTest)  Time elapsed: 2.562 sec  <<< FAILURE!
+java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
+	at com.Test.RANKMFSELENIUM.DashboardNormalSiporderTest.enterotpnumber(DashboardNormalSiporderTest.java:153)
+	at com.Test.Rankmfselenium.BasketNormalSiporderTest.check_enterotpnum(BasketNormalSiporderTest.java:125)
+
