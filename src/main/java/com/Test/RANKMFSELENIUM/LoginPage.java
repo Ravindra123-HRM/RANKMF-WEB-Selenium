@@ -35,9 +35,9 @@ public class LoginPage extends TestBase  {
     	
     }
 	
-	public static void clicklogintest()
+	public static void clicklogintest() throws InterruptedException
 	{
-			
+		Thread.sleep(2000);	
 		login.click();
 		System.out.println( driver.getTitle());
 		 Logs.info("Click on sign button");

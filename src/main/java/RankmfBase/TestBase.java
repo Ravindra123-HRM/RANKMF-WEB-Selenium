@@ -42,7 +42,7 @@ public class TestBase {
 			
 			if(Browsername.equals("chromedriver"))
 			{
-				System.setProperty("webdriver.chrome.driver","C:\\Users\\samco\\eclipse-workspace\\RankmfwebApplication\\chromedriver106\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver","C:\\Users\\samco\\eclipse-workspace\\RankmfwebApplication\\chrome108\\chromedriver.exe");
 		       driver = new ChromeDriver();  
 		      
 				
@@ -61,8 +61,8 @@ public class TestBase {
 			 //driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICT_WAIT, TimeUnit.SECONDS);
 		   //  driver.manage().timeouts().implicitlyWait(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 			driver.get(pro.getProperty("URL"));
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("window.scrollBy(0,250)", "");
+			/*JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,250)", "");*/
 			return driver;
 		}
 		

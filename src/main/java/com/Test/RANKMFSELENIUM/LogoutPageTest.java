@@ -25,7 +25,7 @@ public class LogoutPageTest  extends TestBase{
 		Thread.sleep(2000);
 		WebElement ele=driver.findElement(By.xpath("//a[normalize-space()='Logout']"));
 		ele.click();
-		driver.close();
+		//driver.close();
 		
 		
 		
@@ -34,6 +34,7 @@ public class LogoutPageTest  extends TestBase{
 		
 		
 	}
+	
 	
 
 	

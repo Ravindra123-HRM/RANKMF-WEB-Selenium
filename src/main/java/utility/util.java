@@ -115,6 +115,16 @@ private static WebDriver driver = null;
 	 return data;
 }
  
+ public static  String getdbdata2(String db, String query) throws Exception {
+		Thread.sleep(2000);
+		DBconnection.Connectsql(db);
+		
+	    String data = DBconnection.GetData2(query);
+
+	
+	 return data;
+}
+ 
  
  
  public static boolean existsElement(WebElement element) {
@@ -230,6 +240,7 @@ public static boolean element_present(int value) {
 			Alert alerts = TestBase.driver.switchTo().alert();
 			return alerts;
 		}
+		
 		
 	
 }

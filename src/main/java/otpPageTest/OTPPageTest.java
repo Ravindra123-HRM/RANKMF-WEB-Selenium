@@ -37,6 +37,35 @@ public class OTPPageTest extends TestBase {
 		
 		}
 	
+	public static WebElement verify_otp()
+	{
+		
+		try {
+			//Thread.sleep(2000);
+			//for(int i=0;i<=4;i++) 
+			element = driver.findElement(By.xpath("//input[@id='otp1']"));
+			//element.click();
+			
+			
+		}catch(org.openqa.selenium.TimeoutException TE) {
+			util.waitForElement(driver, element);
+			
+		}catch(Exception Ex) {
+			throw(Ex);
+			
+		}
+		return element;
+		
+		
+		
+			
+			
+		}
+	
+		
+		
+	
+	
 	public static WebElement otp_textboxnormallumpsumsip() throws Exception {
 		try {
 			//Thread.sleep(2000);

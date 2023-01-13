@@ -41,8 +41,10 @@ public class DatepickerCalender extends TestBase {
 	public static void Clickon_Calender() throws InterruptedException
 	{
 		 Thread.sleep(2000);
+		 
 		 WebElement calculate=driver.findElement(By.xpath("//input[@id='date']"));
-		 calculate.click();
+		  calculate.click();
+		
 		    
        
 	}
@@ -91,7 +93,7 @@ public static void start_datepicker() throws InterruptedException
 		for(WebElement cal:Calender)
 		{
 			String name=cal.getText();
-			if(name.equalsIgnoreCase("28"))
+			if(name.equalsIgnoreCase("1"))
 			{
 				cal.click();
 				//Log.info("Date is selected");
@@ -123,7 +125,7 @@ public static void start_smartsipdatepicker() throws InterruptedException
 		{
 			String name=cal.getText();
 			
-			if(name.equalsIgnoreCase("24"))
+			if(name.equalsIgnoreCase("25"))
 			{
 				cal.click();
 				//Log.info("Date is selected");
@@ -145,6 +147,15 @@ public static void click_alertpopup() throws InterruptedException
 	//Alert al = driver.switchTo().alert();
       // click on OK to accept with accept()
       //al.accept();
+}
+
+public static void click_alertpopupok() throws InterruptedException
+{
+	
+Thread.sleep(2000);
+WebElement pop=driver.findElement(By.xpath("//div[@class='pika-single']//div[2]//following::div[4]//button[contains(text(),'Ok')]"));
+pop.click();
+
 }
 
 

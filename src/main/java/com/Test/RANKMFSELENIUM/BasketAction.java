@@ -4,11 +4,14 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 
 import RankmfBase.Email_sent;
@@ -96,6 +99,46 @@ public static void Enter_OTP() throws Exception
 		 Logs.info(" order placed sucessfully for NormalSip popup is displayed");
 		
 	}
+	
+
+	@SuppressWarnings("unlikely-arg-type")
+	public static void FetchSchemeSucessOrder() throws InterruptedException
+	{
+		
+		//WebElement  =driver.findElement(By.xpath("//p[contains(text(),'Something Went Wrong. We will get back to you')]"));
+		Thread.sleep(2000);
+		
+		String text="Something Went Wrong. We will get back to you";
+		
+		WebElement button=driver.findElement(By.xpath("//body/div[11]/div[7]/div[1]/button[1]"));
+		
+		 
+
+		if(!button.equals(text)) {  
+			//driver.switchTo().alert().accept();
+			Thread.sleep(2000);
+			button.click(); 
+			driver.navigate().refresh();
+			System.out.println("Order is not placed :\n Something Went Wrong. We will get back to you");
+			
+
+		} 
+		
+		 else if(button.equals(text)) {
+			Thread.sleep(3000);
+			WebElement text1=driver.findElement(By.xpath("//body/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[3]/p[1]/div[1]/p[1]"));
+			System.out.println("Normal sip text for order placed:\n"+text1.getText());
+			 Logs.info(" order placed sucessfully for Edelweiss Asset Management Limited");
+		}
+		
+		
+			
+			
+	
+		
+		}
+		
+	
 	
 	
 

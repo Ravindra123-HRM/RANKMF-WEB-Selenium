@@ -64,7 +64,7 @@ public class BasketLumpsum_NEFTTest extends TestBase {
 	}
 	
 	@Test(groups="Regression")
-	public static void clickonSigninPage() throws IOException
+	public static void clickonSigninPage() throws IOException, InterruptedException
 	{
 	PropertyConfigurator.configure("log4j.properties");
 		

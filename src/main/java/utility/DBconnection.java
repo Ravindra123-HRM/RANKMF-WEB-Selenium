@@ -27,7 +27,7 @@ public class DBconnection {
 			 con= DriverManager.getConnection(url+db,username,password);
 		}
 		catch(Exception ex) {
-			System.out.println(ex);
+			
 		}
 
 	}
@@ -61,7 +61,7 @@ public class DBconnection {
 		}
 		catch(Exception ex) {
 			System.out.println("Something Went Wrong");
-			System.out.println(ex);
+			
 		}
 
 		return data;
@@ -97,7 +97,46 @@ public class DBconnection {
 		}
 		catch(Exception ex) {
 			System.out.println("Something Went Wrong");
-			System.out.println(ex);
+			
+		}
+		
+
+
+		return data; 
+
+	}
+	
+	public static String GetData2(String query) {
+		// TODO Auto-generated method stub
+		String data = null ;
+		try
+		{
+			//Class.forName("com.mysql.jdbc.Driver");
+
+			// Created the statement
+			Statement st = con.createStatement();
+
+			// Execute statement
+			ResultSet rs = st.executeQuery(query);
+
+			rs.next();
+
+			//data = String.valueOf(rs.getString(1));
+
+			data = rs.getString(1);
+
+			System.out.println(data);
+
+			//Close statement
+			st.close();
+
+			//Close Connection
+			con.close();
+
+		}
+		catch(Exception ex) {
+			System.out.println("Something Went Wrong");
+			//System.out.println(ex);
 		}
 		
 
@@ -110,13 +149,18 @@ public class DBconnection {
 
 	  public static void main(String[] args) { 
 	 
-	  Connectsql("mutual_fund_partners"); 
+	  Connectsql("mutual_funds"); 
 	  
 	 GetData("SELECT otp FROM mf_otp WHERE client_id = 'DP17682' ORDER BY id DESC"); 
+	 
 	// GetData1("SELECT otp FROM mf_otp WHERE client_id = '111874435' ORDER BY id DESC"); 
+	 //GetData2("SELECT `folio_number` FROM `mf_amc_investor_order` WHERE `folio_number` != '' AND `client_id` = 'dp17682' ORDER BY `id` DESC"); 
+	 
 	 
 	 
 	  }
+
+	
 
 	public static String GetData111(String query) {
 		// TODO Auto-generated method stub
