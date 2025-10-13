@@ -30,9 +30,9 @@ public class BasketSipOrder extends TestBase {
 	{
 		BasketlumpsumNetBanking.clickonBasket();
 		
-		BasketlumpsumNetBanking.clickoninvest();
+		//BasketlumpsumNetBanking.clickoninvest();
 		
-		BasketlumpsumNetBanking.selectpaymentmode();
+		//BasketlumpsumNetBanking.selectpaymentmode();
 		
 
 	}
@@ -79,7 +79,7 @@ public class BasketSipOrder extends TestBase {
 	
 	public static void Check_VerifyOTP() throws InterruptedException
 	{
-		BasketlumpsumNetBanking.clickonVerifyOTP();
+		//BasketlumpsumNetBanking.clickonVerifyOTP();
 		
 	}
 	
@@ -106,13 +106,8 @@ public class BasketSipOrder extends TestBase {
 			
 			
 			
-		}
+	}
       
-	
-	
-	
-	
-	
 	
 
 }

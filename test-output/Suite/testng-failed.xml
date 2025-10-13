@@ -4,30 +4,19 @@
   <listeners>
     <listener class-name="RankmfBase.Listeners"/>
   </listeners>
-  <test thread-count="5" name="NormalSiporder(failed)">
+  <test thread-count="5" name="BasketLumpsumorder_NetBanking(failed)">
     <classes>
-      <class name="com.Test.Rankmfselenium.NormalSiporderTest">
+      <class name="com.Test.Rankmfselenium.ExploreNewPageTest">
         <methods>
-          <include name="Click_sipcontinuebtn"/>
+          <include name="Click_Filter"/>
+          <include name="Click_Explorerankmf"/>
           <include name="SetInitialization"/>
-          <include name="Clickon_TotalInvestmentvalue"/>
-          <include name="Startdatepicker"/>
-          <include name="Clickon_logout"/>
-          <include name="search_mutualfunds"/>
-          <include name="Clickon_skipstep"/>
-          <include name="FetchOrderPlaceText_NormalSIP"/>
-          <include name="Click_Normalsip"/>
-          <include name="ClickonSigninPage"/>
-          <include name="Click_logoutbtn"/>
-          <include name="check_enterotpnum"/>
-          <include name="Click_continuebtn"/>
-          <include name="Clickon_confirmcontinue"/>
-          <include name="check_VerifyOTP"/>
-          <include name="InstallementStartdate"/>
-          <include name="Click_HomePage"/>
-          <include name="Clickon_cancelsmartSiporder"/>
+          <include name="Review_PaymentPage"/>
+          <include name="clickonSigninPage"/>
+          <include name="enterotpnum"/>
+          <include name="Click_Myinvestment"/>
         </methods>
-      </class> <!-- com.Test.Rankmfselenium.NormalSiporderTest -->
+      </class> <!-- com.Test.Rankmfselenium.ExploreNewPageTest -->
     </classes>
-  </test> <!-- NormalSiporder(failed) -->
+  </test> <!-- BasketLumpsumorder_NetBanking(failed) -->
 </suite> <!-- Failed suite [Suite] -->

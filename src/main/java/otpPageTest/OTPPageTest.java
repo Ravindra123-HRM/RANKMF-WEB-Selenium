@@ -21,7 +21,7 @@ public class OTPPageTest extends TestBase {
 	public static WebElement otp_textbox() throws Exception {
 		try {
 			//Thread.sleep(2000);
-			element = driver.findElement(By.xpath("//input[@id='otp_text_normal']"));
+			element = driver.findElement(By.xpath("//input[@id='confirm_otp']"));
 		    
 			
 		}catch(org.openqa.selenium.TimeoutException TE) {
@@ -144,7 +144,24 @@ public class OTPPageTest extends TestBase {
 		
 		}
 	
-	
+	public static WebElement otp_lumpsum() throws Exception {
+		try {
+			Thread.sleep(2000);
+			element = driver.findElement(By.xpath("//input[@id='otp-input']"));
+		    
+			
+		}catch(org.openqa.selenium.TimeoutException TE) {
+			util.waitForElement(driver, element);
+			
+		}catch(Exception Ex) {
+			throw(Ex);
+			
+		}
+		
+		
+			return element;
+		
+		}
 	
 	
 	

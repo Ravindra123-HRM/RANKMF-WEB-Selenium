@@ -187,9 +187,9 @@ public static void Enter_OTP() throws Exception
 	
 	public static void send_email()
 	{
-		Email_sent.Email_send();
+	
 		
-		Email_sent.email_send();
+		
 		
 		
 		

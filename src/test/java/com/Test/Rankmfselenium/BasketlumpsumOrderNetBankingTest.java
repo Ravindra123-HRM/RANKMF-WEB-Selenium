@@ -1,6 +1,9 @@
 package com.Test.Rankmfselenium;
 
+import java.awt.AWTException;
+
 import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -13,6 +16,7 @@ import com.Test.RANKMFSELENIUM.LoginPage;
 import com.Test.RANKMFSELENIUM.LogoutPageTest;
 
 import RankmfBase.TestBase;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 
@@ -22,13 +26,14 @@ public class BasketlumpsumOrderNetBankingTest extends TestBase  {
  static BasketlumpsumNetBanking dsl;
  static BasketAction ba;
  static BasketSipOrder bso;
-static BasketLumpsum_NEFTRTGS NEFT;
-static BasketlumpsumNetBanking bln;
+ static BasketLumpsum_NEFTRTGS NEFT;
+ static BasketlumpsumNetBanking bln;
 	//static Basketsiporder bso;
 	
 	@BeforeClass
 	public static void SetInitialization() throws Exception
 	{
+		//WebDriverManager.chromedriver().setup();
 	driver=initialization();
 	lp=new LoginPage(driver);
     dsl=new BasketlumpsumNetBanking(driver);
@@ -59,9 +64,18 @@ static BasketlumpsumNetBanking bln;
 		
 	
 	}
+	@Test(groups= {"Regression"},dependsOnMethods= {"clickonSigninPage"})
+	public static void checkbasketcount() throws InterruptedException
+	{
+		
+		BasketlumpsumNetBanking.Basketcount();
+		
 	
-	@Test(groups= {"Regression"},dependsOnMethods= {"clickonbasketpage"})
-	public static void Clickonconservative() throws InterruptedException
+	}
+	
+	
+	@Test(groups= {"Regression"},dependsOnMethods= {"checkbasketcount"})
+	public static void Clickonconservative() throws InterruptedException, AWTException
 	{
 		
 		BasketlumpsumNetBanking.clickonconservative();
@@ -70,7 +84,7 @@ static BasketlumpsumNetBanking bln;
 	}
 	
 	@Test(groups= {"Regression"},dependsOnMethods= {"Clickonconservative"})
-	public static void clickoninvest() throws InterruptedException
+	public static void clickoninvest() throws InterruptedException, AWTException
 	{
 		
 		
@@ -141,12 +155,12 @@ static BasketlumpsumNetBanking bln;
 	
 	
 	
-	/*@AfterClass
+	@AfterClass
 	public static void Teardown()
 	{
 		driver.close();
 		
-	}*/
+	}
 	
 
 }

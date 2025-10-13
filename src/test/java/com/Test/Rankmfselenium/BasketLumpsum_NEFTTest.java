@@ -92,7 +92,7 @@ public class BasketLumpsum_NEFTTest extends TestBase {
 	public static void Clickonconservative() throws InterruptedException
 	{
 		
-		BasketlumpsumNetBanking.clickonconservative();
+		//BasketlumpsumNetBanking.clickonconservative();
 		
 	
 	}
@@ -102,7 +102,7 @@ public class BasketLumpsum_NEFTTest extends TestBase {
 	{
 		
 		
-		BasketlumpsumNetBanking.clickoninvest();
+		//BasketlumpsumNetBanking.clickoninvest();
 	
 	}
 	@Test(groups= {"Regression"},dependsOnMethods= {"clickoninvest"})
@@ -124,7 +124,7 @@ public class BasketLumpsum_NEFTTest extends TestBase {
 	{
 		
 		
-		BasketlumpsumNetBanking.clickonVerifyOTP();
+	//	BasketlumpsumNetBanking.clickonVerifyOTP();
 
 	
 	

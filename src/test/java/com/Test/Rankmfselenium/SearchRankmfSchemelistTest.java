@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import com.Test.RANKMFSELENIUM.BasketAction;
 
 import com.Test.RANKMFSELENIUM.LoginPage;
-
+import com.Test.RANKMFSELENIUM.NormalLumpsumOrder_Netbanking;
 import com.Test.RANKMFSELENIUM.SearchRankMFScheme;
 import com.Test.RANKMFSELENIUM.TimerSTP;
 
@@ -65,6 +65,8 @@ public class SearchRankmfSchemelistTest extends TestBase {
 		
 		WriteToExcel writeToExcel = new WriteToExcel();
 		writeToExcel.ReadExcel();
+		//NormalLumpsumOrder_Netbanking.click_Invest();
+	    
 		
 		
 	}

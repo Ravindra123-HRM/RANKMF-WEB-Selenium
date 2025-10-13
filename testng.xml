@@ -1,33 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-
-<listeners>
-<listener class-name="RankmfBase.Listeners"/>
-
-</listeners>
- 
-  
-   <!-- RankMF -->
-
- 
-<test thread-count="5" name="NormalSiporder"> 
+  <test thread-count="5" name="Test">
     <classes>
-    <class name="com.Test.Rankmfselenium.NormalSiporderTest"/>
-     </classes>
-  </test>
-<test thread-count="5" name="NormalSmartsiporder"> 
-    <classes>
-    <class name="com.Test.Rankmfselenium.NormalSmartsiporderTest"/>
-  </classes>
-  </test>
-<test thread-count="5" name="Email_send"> 
-    <classes>
-    <class name="com.Test.Rankmfselenium.Email_sendTest"/>
- </classes>
-  </test>
-   
-  
-  
+      <class name="com.Test.Rankmfselenium.ExploreNewPageTest"/>
+      <class name="com.Test.Rankmfselenium.BasketSipOrderTest"/>
+      <class name="com.Test.Rankmfselenium.HistoricalDataPagetest"/>
+      <class name="com.Test.PartnersRankmf.PartnerCRMPageTest"/>
+      <class name="com.Test.Rankmfselenium.NormalSiporderTest"/>
+      <class name="com.Test.Rankmfselenium.NSEDownloadTest"/>
+      <class name="com.Test.Rankmfselenium.Timer_STPTest"/>
+      <class name="com.Test.Rankmfselenium.Normal_lumpsumNetbankingTest"/>
+      <class name="com.Test.PartnersRankmf.Partners_ActiveRateCardTest"/>
+      <class name="com.Test.Rankmfselenium.BasketLumpsum_NEFTTest"/>
+      <class name="com.Test.Rankmfselenium.NormalSmartsiporderTest"/>
+      <class name="com.Test.PartnersRankmf.PartnerDashbaordPageTest"/>
+      <class name="com.Test.Rankmfselenium.Samcopagetest"/>
+      <class name="com.Test.Rankmfselenium.Basketsmartswitchportfolio"/>
+      <class name="com.Test.Rankmfselenium.Email_sendTest"/>
+      <class name="com.Test.Rankmfselenium.SearchRankmfSchemelistTest"/>
+      <class name="com.Test.Rankmfselenium.BasketlumpsumOrderNetBankingTest"/>
+      <class name="com.Test.Rankmfselenium.StepUpSipTest"/>
+      <class name="com.Test.Rankmfselenium.TERA_DATATEST"/>
+    </classes>
+  </test> <!-- Test -->
 </suite> <!-- Suite -->
-

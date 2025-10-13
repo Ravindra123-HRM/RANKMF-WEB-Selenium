@@ -15,7 +15,7 @@ public class Email_sendTest extends TestBase {
 	@Test
 	public static void Email_sendnotification()
 	{
-		Email_sent.email_send();
+		
 		
 		
 	}

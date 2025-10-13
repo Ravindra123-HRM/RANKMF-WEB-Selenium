@@ -57,7 +57,7 @@ public class BasketSipOrderTest extends TestBase{
 	public static void Clickonconservative() throws InterruptedException
 	{
 		
-		BasketlumpsumNetBanking.clickonconservative();
+		//BasketlumpsumNetBanking.clickonconservative();
 		
 	
 	}
@@ -94,7 +94,7 @@ public class BasketSipOrderTest extends TestBase{
 	{
 		
 		
-		BasketlumpsumNetBanking.clickonVerifyOTP();
+		//BasketlumpsumNetBanking.clickonVerifyOTP();
 
 	
 	

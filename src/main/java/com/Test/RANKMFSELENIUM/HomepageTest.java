@@ -1,5 +1,6 @@
 package com.Test.RANKMFSELENIUM;
 
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -55,8 +56,8 @@ public class HomepageTest extends TestBase {
 	public static void SearchMutualfunds() throws InterruptedException
 	{
 	
-		WebElement smartsip=driver.findElement(By.xpath("//input[@id='search_funds']"));
-		smartsip.sendKeys("uti",Keys.SPACE,"master");
+		WebElement smartsip=driver.findElement(By.xpath("//input[@id='filter_scheme_id']"));
+		smartsip.sendKeys("uti");
 		Thread.sleep(3000);
 		smartsip.sendKeys(Keys.ARROW_DOWN);
 		Thread.sleep(2000);
@@ -89,9 +90,9 @@ public class HomepageTest extends TestBase {
 	{
 		Thread.sleep(2000);
 		WebElement continues=driver.findElement(By.xpath("//button[@id='SIP']"));
-		   WebDriverWait wt = new WebDriverWait(driver,6);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		      // elementToBeClickable expected criteria
-		      wt.until(ExpectedConditions.elementToBeClickable (continues));
+		      wait.until(ExpectedConditions.elementToBeClickable (continues));
 		      Actions a=new Actions(driver);
 			   a.moveToElement(continues).build().perform();
 			   continues.click();
@@ -116,10 +117,10 @@ public class HomepageTest extends TestBase {
 	                driver.switchTo().window(ChildWindow);
        WebElement continues=driver.findElement(By.xpath("//div[@class='col s12 center']//button[@class='waves-effect waves-light blue btn btn-extralarge']"));
                                                         //*[@id="modal-7627a8f2-f3eb-f535-769f-302512a9290b"]/div/div[2]/div[2]/div/button[2]
-	   WebDriverWait wt = new WebDriverWait(driver,6);    //*[@id="modal-dcf7104a-b95d-2a60-b8a2-31687e7b2e6c"]/div/div[2]/div[2]/div/button[2]
+       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 	 //div[@class='row mb_0 padding_lr']//div[@class='col s12 center']//button[@class='waves-effect waves-light blue btn btn-extralarge']
 	      // elementToBeClickable expected criteria
-	      wt.until(ExpectedConditions.elementToBeClickable (continues));
+	      wait.until(ExpectedConditions.elementToBeClickable (continues));
 	      Actions a=new Actions(driver);
 		   a.moveToElement(continues).build().perform();
 		   continues.click();
@@ -143,7 +144,7 @@ public class HomepageTest extends TestBase {
 	public static void click_ExploreRankmf() throws InterruptedException
 	{
 		Thread.sleep(2000);
-		 WebElement explore=driver.findElement(By.xpath("//ul[@id='nav-mobile']//a[normalize-space()='Explore All MF Ranks']"));
+		 WebElement explore=driver.findElement(By.xpath("//header/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[1]/a[1]"));
 		    explore.click();
 		
 		

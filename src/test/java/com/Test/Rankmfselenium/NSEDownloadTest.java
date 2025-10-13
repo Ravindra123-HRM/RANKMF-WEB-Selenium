@@ -28,7 +28,7 @@ public class NSEDownloadTest extends TestBase {
 		
 		if(Browsername.equals("chromedriver"))
 		{
-			System.setProperty("webdriver.chrome.driver","C:\\Users\\samco\\eclipse-workspace\\RankmfwebApplication\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver","C:\\Users\\samco\\eclipse-workspace\\RankmfwebApplication\\chromedriver116\\chromedriver-win32\\chromedriver.exe");
 	       driver = new ChromeDriver();  
 	      
 			

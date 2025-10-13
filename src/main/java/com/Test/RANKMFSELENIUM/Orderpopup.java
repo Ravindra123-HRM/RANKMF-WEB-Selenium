@@ -16,7 +16,7 @@ public class Orderpopup extends TestBase {
 		String sotp = util.getdbdata("mutual_funds","SELECT otp FROM mf_otp WHERE client_id = '"+Constant.Username+"'  ORDER BY id DESC");
 		System.out.println("OTP FOR ORDERS : "+sotp);
 		Thread.sleep(2000);
-		OTPPageTest.verify_otp().sendKeys(sotp);
+		OTPPageTest.otp_textbox().sendKeys(sotp);
 		
 		return sotp;
 	}
