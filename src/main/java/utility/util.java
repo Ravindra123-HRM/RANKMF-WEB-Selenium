@@ -23,17 +23,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import org.openqa.selenium.By;
+
+import java.time.Duration;
 
 import RankmfBase.TestBase;
 
 
-public class util {
+public class util extends TestBase {
 
 private static WebDriver driver = null;
 
+	
 	
 	@SuppressWarnings("deprecation")
 	public static WebDriver openBrowser() {
@@ -41,9 +45,9 @@ private static WebDriver driver = null;
 			//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\Desktop\\Fahim Office\\Chrome driver\\chromedriver.exe");
 		//	WebDriver driver = new ChromeDriver();
 			
-			DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-			capabilities.setCapability("marionette",true);
-			driver= new ChromeDriver(capabilities);
+			//DesiredCapabilities capabilities = DesiredCapabilities()
+		//	capabilities.setCapability("marionette",true);
+			driver= new ChromeDriver();
 			
 			driver.manage().deleteAllCookies();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -51,8 +55,8 @@ private static WebDriver driver = null;
 		    return driver;
 	}
  public static void waitForElement(WebDriver driver,WebElement element){ 
-		 WebDriverWait wait = new WebDriverWait(driver, 30);
-	     wait.until(ExpectedConditions.visibilityOf(element));
+	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+     wait.until(ExpectedConditions.visibilityOf(element));
 	 	}
  
  public static void movescrollertoview(WebDriver driver,WebElement element) {
@@ -69,7 +73,8 @@ private static WebDriver driver = null;
  }
  
  public static boolean waitforinvisiblityElement(WebDriver driver,WebElement element){ 
-	 WebDriverWait wait = new WebDriverWait(driver, 30);
+     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
 	 return wait.until(ExpectedConditions.invisibilityOf(element));
       
  	}
@@ -98,7 +103,7 @@ private static WebDriver driver = null;
  }
  public static  String getdbdata(String db, String query) throws Exception {
 		Thread.sleep(2000);
-		DBconnection.Connectsql(db);
+		DBconnection.Connectsql();
 		
 	    String data = DBconnection.GetData(query);
 	
@@ -107,9 +112,9 @@ private static WebDriver driver = null;
  
  public static  String getdbdata1(String db, String query) throws Exception {
 		Thread.sleep(2000);
-		DBconnection.Connectsql(db);
+		DBconnection.Connectsql();
 		
-	    String data = DBconnection.GetData1(query);
+	    String data = DBconnection.GetData(query);
 
 	
 	 return data;
@@ -117,9 +122,9 @@ private static WebDriver driver = null;
  
  public static  String getdbdata2(String db, String query) throws Exception {
 		Thread.sleep(2000);
-		DBconnection.Connectsql(db);
+		DBconnection.Connectsql();
 		
-	    String data = DBconnection.GetData2(query);
+	    String data = DBconnection.GetData(query);
 
 	
 	 return data;

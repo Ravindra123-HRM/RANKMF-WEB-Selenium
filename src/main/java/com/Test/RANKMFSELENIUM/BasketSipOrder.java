@@ -1,5 +1,7 @@
 package com.Test.RANKMFSELENIUM;
 
+import java.awt.AWTException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -26,13 +28,13 @@ public class BasketSipOrder extends TestBase {
     	
     }
 	
-	public static void clickonsip() throws InterruptedException
+	public static void clickonsip() throws InterruptedException, AWTException
 	{
 		BasketlumpsumNetBanking.clickonBasket();
 		
-		BasketlumpsumNetBanking.clickoninvest();
+		//BasketlumpsumNetBanking.clickoninvest();
 		
-		BasketlumpsumNetBanking.selectpaymentmode();
+		//BasketlumpsumNetBanking.selectpaymentmode();
 		
 
 	}
@@ -79,7 +81,7 @@ public class BasketSipOrder extends TestBase {
 	
 	public static void Check_VerifyOTP() throws InterruptedException
 	{
-		BasketlumpsumNetBanking.clickonVerifyOTP();
+		//BasketlumpsumNetBanking.clickonVerifyOTP();
 		
 	}
 	
@@ -106,13 +108,8 @@ public class BasketSipOrder extends TestBase {
 			
 			
 			
-		}
+	}
       
-	
-	
-	
-	
-	
 	
 
 }

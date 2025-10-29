@@ -1,5 +1,11 @@
 package com.Test.Rankmfselenium;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+
+import java.awt.AWTException;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -8,31 +14,22 @@ import java.util.Date;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.openqa.selenium.WebElement;
 
 import com.Test.RANKMFSELENIUM.BasketAction;
 import com.Test.RANKMFSELENIUM.BasketLumpsum_NEFTRTGS;
 import com.Test.RANKMFSELENIUM.BasketlumpsumNetBanking;
 import com.Test.RANKMFSELENIUM.LoginPage;
 import com.Test.RANKMFSELENIUM.LogoutPageTest;
+//import com.Test.RANKMFSELENIUM.TestMailExample;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.markuputils.ExtentColor;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
 
-import RankmfBase.Email_sent;
-import RankmfBase.ExtentReportNG;
+
+
 import RankmfBase.TestBase;
 
 
@@ -51,6 +48,7 @@ public class BasketLumpsum_NEFTTest extends TestBase {
 	@BeforeClass
 	public static void SetInitialization() throws Exception
 	{
+		 
 	driver=initialization();
 	lp=new LoginPage(driver);
 	NEFT=new BasketLumpsum_NEFTRTGS(driver);
@@ -80,32 +78,32 @@ public class BasketLumpsum_NEFTTest extends TestBase {
   } 
 
 	@Test(groups= {"Regression"},dependsOnMethods= {"clickonSigninPage"})
-	public static void clickonbasketpage() throws InterruptedException
+	public static void clickonbasketpage() throws InterruptedException, AWTException
 	{
 		
 		BasketlumpsumNetBanking.clickonBasket();
 		
 	
 	}
-	
+
 	@Test(groups= {"Regression"},dependsOnMethods= {"clickonbasketpage"})
-	public static void Clickonconservative() throws InterruptedException
+	public static void verifybasketcount() throws InterruptedException, AWTException
 	{
 		
-		BasketlumpsumNetBanking.clickonconservative();
+		BasketlumpsumNetBanking.Basketcount();
 		
 	
 	}
 	
-	@Test(groups= {"Regression"},dependsOnMethods= {"Clickonconservative"})
-	public static void clickoninvest() throws InterruptedException
+	@Test(groups= {"Regression"},dependsOnMethods= {"verifybasketcount"})
+	public static void Clickoninvest() throws InterruptedException, AWTException
 	{
 		
 		
 		BasketlumpsumNetBanking.clickoninvest();
 	
 	}
-	@Test(groups= {"Regression"},dependsOnMethods= {"clickoninvest"})
+	@Test(groups= {"Regression"},dependsOnMethods= {"Clickoninvest"})
 	public static void clickonpaymentmode() throws InterruptedException
 	{
 		
@@ -124,7 +122,7 @@ public class BasketLumpsum_NEFTTest extends TestBase {
 	{
 		
 		
-		BasketlumpsumNetBanking.clickonVerifyOTP();
+	BasketlumpsumNetBanking.clickonVerifyOTP();
 
 	
 	
@@ -134,10 +132,17 @@ public class BasketLumpsum_NEFTTest extends TestBase {
 	{
 		try {
 			BasketAction.Enter_Otp_Number();
+			
+			
+		//	String otp = TestMailExample.getGmailOtp("yourgmail@gmail.com", "your-app-password", "Your OTP");
+			WebElement otpField = driver.findElement(By.xpath("//input[@id='confirm_otp']"));
+			//otpField.sendKeys(otp);
+			driver.findElement(By.xpath("//a[@id='basket_otp_submit_normal']"));
 			//DBconnection.Connectsql(null);
 			} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			
 	}
 		
 	}

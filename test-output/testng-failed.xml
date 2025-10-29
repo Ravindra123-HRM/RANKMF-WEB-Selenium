@@ -3,14 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Test.Rankmfselenium.SearchRankmfSchemelistTest">
+      <class name="com.Test.PartnersRankmf.Partners_ActiveRateCardTest">
         <methods>
-          <include name="Click_Explorerankmf"/>
-          <include name="Click_HomePage"/>
-          <include name="clickonSigninPage"/>
-          <include name="SetInitialization"/>
+          <include name="Brokerage"/>
+          <include name="clickonLoginpage"/>
+          <include name="Search_AMC"/>
+          <include name="DashbaordPage"/>
+          <include name="SchemeType_SubSchemeType"/>
+          <include name="AmountInvest"/>
+          <include name="setInitialization"/>
+          <include name="ClickonSigninPage"/>
+          <include name="Brokerages"/>
         </methods>
-      </class> <!-- com.Test.Rankmfselenium.SearchRankmfSchemelistTest -->
+      </class> <!-- com.Test.PartnersRankmf.Partners_ActiveRateCardTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

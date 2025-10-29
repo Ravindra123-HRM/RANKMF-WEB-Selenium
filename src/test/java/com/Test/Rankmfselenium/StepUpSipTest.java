@@ -1,5 +1,7 @@
 package com.Test.Rankmfselenium;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import org.apache.log4j.PropertyConfigurator;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;

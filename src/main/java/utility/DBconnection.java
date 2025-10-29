@@ -3,171 +3,79 @@ package utility;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DBconnection {
 
+    static Connection con = null;
 
-	  static Connection con=null; ;
-		
-	 static String url ="jdbc:mysql://192.168.5.73:3306/"; 
-  static String username ="samcoadmin";
-	 static String password = "SamcoDBAdmin";
-		 
-	//String query = "Select id from sm_user_account where email='testyui@samco.in'";
+    // Database credentials
+    static String username = "ravindra.chavan@rankmf.com";
+    static String password = "aEwds38sDdw";
+    static String host = "192.168.5.100";
+    static String port = "3306";
+    static String dbName = "mutual_funds"; // Change if needed
 
-	public static  void Connectsql(String db) {
-		try {
-			//Load Driver
-			
-			Class.forName("com.mysql.cj.jdbc.Driver");
+    // Establish connection
+    public static void Connectsql() {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
 
-			//Establish the connection
-			//con = DriverManager.getConnection(Constant.dburl+db,Constant.dbusername,Constant.dbPassword);
-			 con= DriverManager.getConnection(url+db,username,password);
-		}
-		catch(Exception ex) {
-			
-		}
+            // Full JDBC URL
+            String url = "jdbc:mysql://" + host + ":" + port + "/" + dbName
+                    + "?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
 
-	}
+            con = DriverManager.getConnection(url, username, password);
+            System.out.println("✅ Connection successful to database: " + dbName);
+        } catch (ClassNotFoundException e) {
+            System.out.println("❌ MySQL Driver not found.");
+            e.printStackTrace();
+        } catch (SQLException e) {
+            System.out.println("❌ Connection failed. Please check host, credentials, or firewall.");
+            e.printStackTrace();
+        }
+    }
 
-	public static  String GetData(String query ) {
-		String data = null ;
-		try
-		{
-			//Class.forName("com.mysql.jdbc.Driver");
+    // Get data from query
+    public static String GetData(String query) {
+        String data = null;
+        try {
+            if (con == null || con.isClosed()) {
+                System.out.println("⚠️ No connection established. Connecting now...");
+                Connectsql(); // automatically reconnect if needed
+            }
 
-			// Created the statement
-			Statement st = con.createStatement();
+            try (Statement st = con.createStatement();
+                 ResultSet rs = st.executeQuery(query)) {
 
-			// Execute statement
-			ResultSet rs = st.executeQuery(query);
+                if (rs.next()) {
+                    data = rs.getString(1);
+                    System.out.println("✅ Result: " + data);
+                } else {
+                    System.out.println("ℹ️ No data found for query.");
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println("❌ Query execution failed.");
+            e.printStackTrace();
+        } finally {
+            try {
+                if (con != null && !con.isClosed()) {
+                    con.close();
+                    System.out.println("🔒 Connection closed.");
+                }
+            } catch (SQLException e) {
+                System.out.println("⚠️ Failed to close connection.");
+                e.printStackTrace();
+            }
+        }
+        return data;
+    }
 
-			rs.next();
-
-			//data = String.valueOf(rs.getString(1));
-
-			data = rs.getString(1);
-
-			System.out.println(data);
-
-			//Close statement
-			st.close();
-
-			//Close Connection
-			con.close();
-
-		}
-		catch(Exception ex) {
-			System.out.println("Something Went Wrong");
-			
-		}
-
-		return data;
-
-	}
-
-	public static  String GetData1(String query ) {
-		String data = null ;
-		try
-		{
-			//Class.forName("com.mysql.jdbc.Driver");
-
-			// Created the statement
-			Statement st = con.createStatement();
-
-			// Execute statement
-			ResultSet rs = st.executeQuery(query);
-
-			rs.next();
-
-			//data = String.valueOf(rs.getString(1));
-
-			data = rs.getString(1);
-
-			System.out.println(data);
-
-			//Close statement
-			st.close();
-
-			//Close Connection
-			con.close();
-
-		}
-		catch(Exception ex) {
-			System.out.println("Something Went Wrong");
-			
-		}
-		
-
-
-		return data; 
-
-	}
-	
-	public static String GetData2(String query) {
-		// TODO Auto-generated method stub
-		String data = null ;
-		try
-		{
-			//Class.forName("com.mysql.jdbc.Driver");
-
-			// Created the statement
-			Statement st = con.createStatement();
-
-			// Execute statement
-			ResultSet rs = st.executeQuery(query);
-
-			rs.next();
-
-			//data = String.valueOf(rs.getString(1));
-
-			data = rs.getString(1);
-
-			System.out.println(data);
-
-			//Close statement
-			st.close();
-
-			//Close Connection
-			con.close();
-
-		}
-		catch(Exception ex) {
-			System.out.println("Something Went Wrong");
-			//System.out.println(ex);
-		}
-		
-
-
-		return data; 
-
-	}
-	
-	
-
-	  public static void main(String[] args) { 
-	 
-	  Connectsql("mutual_funds"); 
-	  
-	 GetData("SELECT otp FROM mf_otp WHERE client_id = 'DP17682' ORDER BY id DESC"); 
-	 
-	// GetData1("SELECT otp FROM mf_otp WHERE client_id = '111874435' ORDER BY id DESC"); 
-	 //GetData2("SELECT `folio_number` FROM `mf_amc_investor_order` WHERE `folio_number` != '' AND `client_id` = 'dp17682' ORDER BY `id` DESC"); 
-	 
-	 
-	 
-	  }
-
-	
-
-	public static String GetData111(String query) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	  
-	  
- 
+    // Test the connection
+    public static void main(String[] args) {
+        Connectsql();
+        GetData("SELECT otp FROM mf_otp WHERE client_id = 'RR34434' ORDER BY id DESC LIMIT 1");
+    }
 }
-	

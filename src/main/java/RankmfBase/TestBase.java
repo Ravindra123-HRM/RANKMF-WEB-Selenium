@@ -1,12 +1,9 @@
 package RankmfBase;
 
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
@@ -14,6 +11,11 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import utility.ExcelUtils;
+
+
 
 
 
@@ -31,10 +33,12 @@ public class TestBase {
 		
 		
 
-		public static  WebDriver initialization() throws Exception
+		public static   WebDriver initialization() throws Exception
 		{
+				
+		        
 			pro=new Properties();
-			FileInputStream fis=new FileInputStream("C:\\Users\\samco\\eclipse-workspace\\RANKMFSELENIUM\\src\\main\\java\\RankmfBase\\configproperties");
+			FileInputStream fis=new FileInputStream("C:\\Users\\ravindra.chavan\\Downloads\\RankmfwebApplication\\src\\main\\java\\RankmfBase\\configproperties");
 			
 			pro.load(fis);
 			
@@ -42,10 +46,9 @@ public class TestBase {
 			
 			if(Browsername.equals("chromedriver"))
 			{
-				System.setProperty("webdriver.chrome.driver","C:\\Users\\samco\\eclipse-workspace\\RankmfwebApplication\\chrome108\\chromedriver.exe");
-		       driver = new ChromeDriver();  
-		      
-				
+				System.setProperty("webdriver.chrome.driver","C:\\Users\\ravindra.chavan\\Downloads\\RankmfwebApplication\\chromedriver-win64\\chromedriver.exe");
+		        driver = new ChromeDriver();  
+		        
 			}
 			
 			else if(Browsername.equals("firefoxdriver"))
@@ -56,6 +59,7 @@ public class TestBase {
 					
 				}
 			driver.manage().window().maximize();
+			
 			//Thread.sleep(5000);
 			
 			 //driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICT_WAIT, TimeUnit.SECONDS);
@@ -77,7 +81,30 @@ public class TestBase {
 			
 			
 		}
+		
+		public static  String datadriventest() throws IOException
+		{
+			 
+				String path="C:\\Users\\ravindra.chavan\\Downloads\\Excelulity.xlsx";		
+				 ExcelUtils excel = new ExcelUtils(path, "Sheet1");
+
+			        int rowCount = excel.getRowCount();
+			        for (int i = 1; i < rowCount; i++) {  // i=1 to skip header row
+			            String username = excel.getcellData(i, 0);
+			            String password = excel.getcellData(i, 1);
+			        
+			
+		}
+					return path;
+		
+		
+
+		
+}
+}
 
 		
 
-}
+		
+
+

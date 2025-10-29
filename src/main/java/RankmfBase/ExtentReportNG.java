@@ -27,14 +27,14 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 public class ExtentReportNG {
 	static ExtentReports extent;
 	static ExtentSparkReporter htmlReporter;
-static WebElement driver;
+    static WebElement driver;
+    public static String reportPath;
 	 public static ExtentTest logger;
-	
 	public static   ExtentReports extentReportGenerator() {
+		  if (extent == null) {
+	String reportPath=System.getProperty("user.dir")+"./Reports/RANKMF.html";
 	
-	String path=System.getProperty("user.dir")+"./Reports/RANKMF.html";
-	
-	ExtentSparkReporter htmlReporter=new ExtentSparkReporter(path);
+	ExtentSparkReporter htmlReporter=new ExtentSparkReporter(reportPath);
 	
 	htmlReporter.config().setDocumentTitle("Automation in RankMF");
 	htmlReporter.config().setReportName("RANKMF_WEB");
@@ -48,9 +48,10 @@ static WebElement driver;
 	
 	
 	
-	return extent;
-	}
 	
+	}
+		  return extent;
+	}
 	 public static  String getScreenShot( String screenshotName) throws IOException {
 		 String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 		 TakesScreenshot ts = (TakesScreenshot) driver;
@@ -63,46 +64,5 @@ static WebElement driver;
 		 }
 	 
 	
-	public void getResult(ITestResult result) throws Exception{
-		if(result.getStatus() == ITestResult.FAILURE){
-		//MarkupHelper is used to display the output in different colors
-		logger.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " - Test Case Failed", ExtentColor.RED));
-		logger.log(Status.FAIL, MarkupHelper.createLabel(result.getThrowable() + " - Test Case Failed", ExtentColor.RED));
-		//To capture screenshot path and store the path of the screenshot in the string "screenshotPath"
-		//We do pass the path captured by this method in to the extent reports using "logger.addScreenCapture" method.
-		//String Scrnshot=TakeScreenshot.captuerScreenshot(driver,"TestCaseFailed");
-		String screenshotPath = getScreenShot(result.getName());
-		//To add it in the extent report
-		logger.fail("Test Case Failed Snapshot is below " + logger.addScreenCaptureFromPath(screenshotPath));
-		}
-		else if(result.getStatus() == ITestResult.SKIP){
-		logger.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
-		}
-		else if(result.getStatus() == ITestResult.SUCCESS)
-		{
-		logger.log(Status.PASS, MarkupHelper.createLabel(result.getName()+" Test Case PASSED", ExtentColor.GREEN));
-		}
-		
-		}
 	
-	/*public static  void passFailScreenshot(String name) throws IOException
-	{
-		String screenshotNames= ExtentReportNG.getScreenShot(name);
-		screenCapture("testing",screenshotNames);
-		
-		
-	}*/
-	public static void passFailScreenshot(String name) throws IOException {
-		// TODO Auto-generated method stub
-		String screenshotNames= ExtentReportNG.getScreenShot(name);
-		screenCapture("testing",screenshotNames);
-		
-	}
-
-	public static  ExtentReports screenCapture(String logdetails, String imagepath) throws IOException {
-		// TODO Auto-generated method stub
-		logger.log(Status.INFO,logdetails,MediaEntityBuilder.createScreenCaptureFromPath(imagepath).build());
-		return extent;
-		
-	}
 }

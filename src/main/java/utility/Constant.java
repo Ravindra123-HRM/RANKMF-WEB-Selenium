@@ -11,8 +11,17 @@ public class Constant {
 //	public static final String Url = "https://dev.rankmf.com/home";
 //	public static final String basketUrl = "https://dev.rankmf.com/basket/";
 
-	public static final String Username = "DP17682";
-	public static final String User = "111874435";
+	public static final String Username = "RR34434";
+	public static final String password = "1234";
+	
+	public static final String User = "DP17682";
+	
+	public static final String AMC="Axis";
+	public static final String DATE="30-06-2023";
+	public static final String AMOUNT="5000";
+	
+	public static final String clientuser="ravindra.chavan@rankmf.com";
+	public static final String starpassword="rankmf@089";
 	
 	public static final String Password = "1234";
 
@@ -21,11 +30,14 @@ public class Constant {
 
 
 
-	public static final String dburl ="jdbc:mysql:http://192.168.5.73:6606/";
-	public static final String dbusername ="samcoadmin"; 
-	public static final String dbPassword ="SamcoDBAdmin";
+	public static final String dburl ="jdbc:mysql://192.168.5.73:3306/";
+	public static final String dbusername ="samco_user"; 
+	public static final String dbPassword ="samco123456";
 	public static final String NetBanking ="SamcoDBAdmin";
 	public static final String NEFT ="SamcoDBAdmin";
+	
+	
+	
 	
 
 

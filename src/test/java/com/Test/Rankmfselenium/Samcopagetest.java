@@ -1,5 +1,7 @@
 package com.Test.Rankmfselenium;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import java.io.FileInputStream;
 import java.util.Properties;
 
@@ -22,7 +24,7 @@ public class Samcopagetest extends TestBase  {
 	{
 	//driver=initialization();
 		pro=new Properties();
-		FileInputStream fis=new FileInputStream("C:\\Users\\samco\\eclipse-workspace\\RANKMFSELENIUM\\src\\main\\java\\RankmfBase\\configproperties");
+		FileInputStream fis=new FileInputStream("C:\\Users\\ravindra.chavan\\Downloads\\RankmfwebApplication\\src\\main\\java\\RankmfBase\\configproperties");
 		
 		pro.load(fis);
 		
@@ -30,7 +32,7 @@ public class Samcopagetest extends TestBase  {
 		
 		if(Browsername.equals("chromedriver"))
 		{
-			System.setProperty("webdriver.chrome.driver","C:\\Users\\samco\\eclipse-workspace\\RankmfwebApplication\\chrome108\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver","C:\\Users\\ravindra.chavan\\Downloads\\RankmfwebApplication\\chromedriver-win64\\chromedriver.exe");
 	       driver = new ChromeDriver();  
 	      
 			

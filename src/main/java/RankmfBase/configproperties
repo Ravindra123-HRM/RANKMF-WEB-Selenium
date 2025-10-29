@@ -1,4 +1,4 @@
-URL=https://dev-newof.rankmf.com/filter/find-mutual-funds
+URL=https://www.rankmf.com/
 chrome=chromedriver
 firefox=firefoxdriver
 IE=Internetexplorer
@@ -8,3 +8,5 @@ clientuser=DM31372
 starpassword=123456
 URLNAME=https://niftyindices.com/reports/historical-data
 url=https://www.samcomf.com/
+Emails=ravindra.chavan@rankmf.com
+Password=123456

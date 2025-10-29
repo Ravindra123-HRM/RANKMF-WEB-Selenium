@@ -33,11 +33,11 @@ public class NormalSipOrder extends TestBase {
 	public static void click_Normalsip() throws Exception
 	{
 		Thread.sleep(2000);
-        WebElement sip=driver.findElement(By.xpath("//div[@class='disp_table_both']//button[@id='sip_option_btn']"));
+        WebElement sip=driver.findElement(By.xpath("//div[@class='disp_table_both']//button[@id='SIP']"));
        sip.click();
        
        Thread.sleep(2000);
-       WebElement sippop=driver.findElement(By.xpath(" //article[@id='trigger_sip_additional']"));
+       WebElement sippop=driver.findElement(By.xpath("//article[@id='trigger_sip_additional']"));
        sippop.click();
        
        Thread.sleep(2000);

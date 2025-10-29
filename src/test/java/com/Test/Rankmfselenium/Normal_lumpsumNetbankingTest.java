@@ -1,5 +1,9 @@
 package com.Test.Rankmfselenium;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import org.apache.log4j.PropertyConfigurator;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -15,6 +19,7 @@ import com.Test.RANKMFSELENIUM.NormalSipOrder;
 import com.Test.RANKMFSELENIUM.NormalSmartSipOrder;
 
 import RankmfBase.TestBase;
+import utility.Constant;
 
 public class Normal_lumpsumNetbankingTest extends TestBase {
 	static LoginPage lp;
@@ -30,7 +35,6 @@ public class Normal_lumpsumNetbankingTest extends TestBase {
 	public static void SetInitialization() throws Exception
 	{
 		driver=initialization();
-		
 		lp=new LoginPage(driver);
 	    dsl=new BasketlumpsumNetBanking(driver);
         bso=new BasketSipOrder(driver);
@@ -43,10 +47,10 @@ public class Normal_lumpsumNetbankingTest extends TestBase {
 	@Test(groups="Regression")
 	public static void clickonSigninPage() throws Exception
 	{
-	PropertyConfigurator.configure("log4j.properties");
+	
 		LoginPage.clicklogintest();
 
-		LoginPage.loginpage(pro.getProperty("Username"), pro.getProperty("password"));
+		LoginPage.loginpage(Constant.Username, Constant.password);
 		
 		//HomepageTest.TotalInvestmentvalue();
 	
@@ -105,18 +109,9 @@ public class Normal_lumpsumNetbankingTest extends TestBase {
 	
 
 	
-	@Test(groups= {"Regression"},dependsOnMethods= {"enterotpnum"})
-	public static void RedirectNetbankingurl() throws Exception
-	{
-		try {
-			BasketlumpsumNetBanking.Alertpopup_NetbankingNormal();
-			//DBconnection.Connectsql(null);
-			} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	
 		
-	}
+	
 	
 	
 	

@@ -1,6 +1,13 @@
 package com.Test.Rankmfselenium;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import java.awt.AWTException;
+
 import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -9,32 +16,32 @@ import com.Test.RANKMFSELENIUM.BasketAction;
 import com.Test.RANKMFSELENIUM.BasketLumpsum_NEFTRTGS;
 import com.Test.RANKMFSELENIUM.BasketSipOrder;
 import com.Test.RANKMFSELENIUM.BasketlumpsumNetBanking;
+import com.Test.RANKMFSELENIUM.EmailOTPReader;
 import com.Test.RANKMFSELENIUM.LoginPage;
 import com.Test.RANKMFSELENIUM.LogoutPageTest;
 
 import RankmfBase.TestBase;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 
 public class BasketlumpsumOrderNetBankingTest extends TestBase  {
 	
  static LoginPage lp;
- static BasketlumpsumNetBanking dsl;
+ static BasketlumpsumNetBanking bln;
  static BasketAction ba;
- static BasketSipOrder bso;
 static BasketLumpsum_NEFTRTGS NEFT;
-static BasketlumpsumNetBanking bln;
 	//static Basketsiporder bso;
 	
 	@BeforeClass
 	public static void SetInitialization() throws Exception
 	{
+		//WebDriverManager.chromedriver().setup();
+		
 	driver=initialization();
 	lp=new LoginPage(driver);
-    dsl=new BasketlumpsumNetBanking(driver);
-    bso=new BasketSipOrder(driver);
-    
-   // bso=new Basketsiporder(driver);
+    bln=new BasketlumpsumNetBanking(driver);
+    NEFT=new BasketLumpsum_NEFTRTGS(driver);
      ba=new BasketAction();
 	}
 	
@@ -52,25 +59,24 @@ static BasketlumpsumNetBanking bln;
 	
     } 
 	@Test(groups= {"Regression"},dependsOnMethods= {"clickonSigninPage"})
-	public static void clickonbasketpage() throws InterruptedException
+	public static void clickonbasketpage() throws InterruptedException, AWTException
 	{
 		
 		BasketlumpsumNetBanking.clickonBasket();
 		
 	
 	}
-	
 	@Test(groups= {"Regression"},dependsOnMethods= {"clickonbasketpage"})
-	public static void Clickonconservative() throws InterruptedException
+	public static void checkbasketcount() throws InterruptedException, AWTException
 	{
 		
-		BasketlumpsumNetBanking.clickonconservative();
+		BasketlumpsumNetBanking.Basketcount();
 		
 	
 	}
 	
-	@Test(groups= {"Regression"},dependsOnMethods= {"Clickonconservative"})
-	public static void clickoninvest() throws InterruptedException
+	@Test(groups= {"Regression"},dependsOnMethods= {"checkbasketcount"})
+	public static void clickoninvest() throws InterruptedException, AWTException
 	{
 		
 		
@@ -78,14 +84,10 @@ static BasketlumpsumNetBanking bln;
 	
 	}
 	@Test(groups= {"Regression"},dependsOnMethods= {"clickoninvest"})
-	public static void clickonpaymentmode() throws InterruptedException
+	public static void clickonpaymentmode() throws InterruptedException	
 	{
 		
 		BasketlumpsumNetBanking.selectpaymentmode();
-		
-
-	
-	
 	}
 	
 	@Test(groups= {"Regression"},dependsOnMethods= {"clickonpaymentmode"})
@@ -108,6 +110,23 @@ static BasketlumpsumNetBanking bln;
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 	}
+		
+		 String host = "imap.gmail.com";  // For Outlook: "outlook.office365.com"
+		    String user = "ravindrac2871990@gmail.com"; // your email ID
+		    String password = "jjgciyvvdciqeubs"; // Gmail app password
+		    String subjectKeyword = "One Time Password(OTP) for your mutual fund investment."; // subject to filter emails
+
+		    String otp = EmailOTPReader.fetchOTP(host, user, password, subjectKeyword);
+
+		    // STEP 3: Enter OTP in the input field (if page requires it)
+		    if (otp != null) {
+		    	BasketAction.Enter_Otp_Number();
+		       driver.findElement(By.id("otpField")).sendKeys(otp);
+		        System.out.println("✅ OTP Entered Successfully: " + otp);
+		    } else {
+		        System.out.println("❌ OTP not found in emails!");
+		    }
+
 		
 	}
 	
@@ -141,12 +160,12 @@ static BasketlumpsumNetBanking bln;
 	
 	
 	
-	/*@AfterClass
+	@AfterClass
 	public static void Teardown()
 	{
 		driver.close();
 		
-	}*/
+	}
 	
 
 }

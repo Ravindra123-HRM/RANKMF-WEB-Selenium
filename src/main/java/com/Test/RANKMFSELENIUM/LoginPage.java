@@ -19,13 +19,12 @@ public class LoginPage extends TestBase  {
 	WebElement clientid;
 	@FindBy(id="login_password")
 	static
-	WebElement Password;
+	WebElement password;
 	@FindBy(id="common_login_btn")
 	static
 	WebElement loginbutton;
 	
-	final static String clientuser="DM31372";
-	final static String starpassword="123456";
+
 	
 	
 	public LoginPage(WebDriver driver)
@@ -44,11 +43,11 @@ public class LoginPage extends TestBase  {
 		
 	}
 	
-	 public static void loginpage(String Username,String password)
+	 public static void loginpage(String username,String Password)
 	   {
-		   clientid.sendKeys(Username);
+		   clientid.sendKeys(username);
 		   Logs.info("Enter Username");
-		   Password.sendKeys(password);
+		   password.sendKeys(Password);
 		   Logs.info("Enter Password");
 		   loginbutton.click();
 		   Logs.info("click on sign button");
@@ -58,13 +57,13 @@ public class LoginPage extends TestBase  {
 		   
 		 }
 	 
-	 public static void smartswitchlogin() throws InterruptedException 
+	 public static void smartswitchlogin(String username,String Password) throws InterruptedException 
 	   {
 		
 		
-		   clientid.sendKeys(clientuser);
+		   clientid.sendKeys(username);
 		   Logs.info("Enter Username");
-		   Password.sendKeys(starpassword);
+		   password.sendKeys(Password);
 		   Logs.info("Enter Password");
 		   loginbutton.click();
 		   Logs.info("click on sign button");

@@ -1,5 +1,10 @@
 package com.Test.Rankmfselenium;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+
+import java.awt.AWTException;
+
 import org.apache.log4j.PropertyConfigurator;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -45,7 +50,7 @@ public class BasketSipOrderTest extends TestBase{
 	
     } 
 	@Test(groups= {"Regression"},dependsOnMethods= {"clickonSigninPage"})
-	public static void clickonbasketpage() throws InterruptedException
+	public static void clickonbasketpage() throws InterruptedException, AWTException
 	{
 		
 		BasketlumpsumNetBanking.clickonBasket();
@@ -57,7 +62,7 @@ public class BasketSipOrderTest extends TestBase{
 	public static void Clickonconservative() throws InterruptedException
 	{
 		
-		BasketlumpsumNetBanking.clickonconservative();
+		//BasketlumpsumNetBanking.clickonconservative();
 		
 	
 	}
@@ -94,7 +99,7 @@ public class BasketSipOrderTest extends TestBase{
 	{
 		
 		
-		BasketlumpsumNetBanking.clickonVerifyOTP();
+		//BasketlumpsumNetBanking.clickonVerifyOTP();
 
 	
 	

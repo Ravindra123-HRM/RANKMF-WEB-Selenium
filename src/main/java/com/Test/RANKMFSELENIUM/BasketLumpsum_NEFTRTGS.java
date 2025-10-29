@@ -24,7 +24,7 @@ public class BasketLumpsum_NEFTRTGS extends TestBase {
 	@FindBy(xpath="//a[@id='basket_order_button']\r\n")
 	static
 	WebElement confirmcontinue;
-	@FindBy(xpath="//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/label[1]/span[1]")
+	@FindBy(xpath="//input[@id='term_condition_checkbox']")
 	static       
 	WebElement otpcheckbox;
 	@FindBy(xpath="//a[@id='basket_otp_click_normal']")
@@ -42,6 +42,7 @@ public class BasketLumpsum_NEFTRTGS extends TestBase {
 	
 	public static void clickonBasket() throws InterruptedException
 	{
+		
 	    Thread.sleep(2000);
 		Actions a=new Actions(driver);
 	   	a.moveToElement(Baskets).build().perform();
@@ -58,7 +59,7 @@ public class BasketLumpsum_NEFTRTGS extends TestBase {
 	
 	
 
-	public static  void clickoninvest() throws InterruptedException {
+	public static  void Clickoninvest() throws InterruptedException {
 		// TODO Auto-generated method stub
         Thread.sleep(3000);
 		
@@ -68,26 +69,16 @@ public class BasketLumpsum_NEFTRTGS extends TestBase {
 	
 	public static void selectpaymentmode() throws InterruptedException {
 		Thread.sleep(2000);
-		Select paymentmode=new Select(driver.findElement(By.xpath("//select[@id='basketpayment_mode']")));
-		paymentmode.selectByVisibleText("NEFT/RTGS");
-		try {
-			confirmcontinue.click();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		WebElement payementmode=driver.findElement(By.xpath("//input[@value='neft']"));
+		payementmode.click();
 		
 	}
 	
 	public static void Enter_UtrNo() throws InterruptedException
 	{
 		Thread.sleep(2000);
-		WebElement utr=driver.findElement(By.xpath("//input[@id='basket_utr_no']"));
+		WebElement utr=driver.findElement(By.xpath("//input[@id='utr_no_input']"));
 		utr.sendKeys("1234ewfwegweg");
-		
-		Thread.sleep(2000);
-		WebElement utr_button=driver.findElement(By.xpath("//a[@id='basket_order_utr']"));
-		utr_button.click();
 		
 		//a[@id='basket_order_utr']
 		
@@ -121,6 +112,7 @@ public class BasketLumpsum_NEFTRTGS extends TestBase {
 		
 	
 	}
+
 
 
 }

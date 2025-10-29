@@ -1,5 +1,7 @@
 package com.Test.Rankmfselenium;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -11,6 +13,7 @@ import com.Test.RANKMFSELENIUM.HomepageTest;
 import com.Test.RANKMFSELENIUM.LoginPage;
 
 import RankmfBase.TestBase;
+import utility.Constant;
 
 import com.Test.RANKMFSELENIUM.SmartSwitchportfolio;
 
@@ -43,7 +46,7 @@ public class Basketsmartswitchportfolio  extends TestBase {
 		{
 			
 			LoginPage.clicklogintest();
-			LoginPage.smartswitchlogin();
+			LoginPage.smartswitchlogin(Constant.Username, Constant.password);
 			
 		}
 		@Test(groups= {"Regression"},dependsOnMethods= {"ClickonSigninPage"})

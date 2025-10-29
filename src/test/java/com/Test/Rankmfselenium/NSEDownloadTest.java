@@ -1,5 +1,7 @@
 package com.Test.Rankmfselenium;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import java.io.FileInputStream;
 import java.time.LocalDate;
 import java.util.Properties;
@@ -28,7 +30,7 @@ public class NSEDownloadTest extends TestBase {
 		
 		if(Browsername.equals("chromedriver"))
 		{
-			System.setProperty("webdriver.chrome.driver","C:\\Users\\samco\\eclipse-workspace\\RankmfwebApplication\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver","C:\\Users\\samco\\eclipse-workspace\\RankmfwebApplication\\chromedriver116\\chromedriver-win32\\chromedriver.exe");
 	       driver = new ChromeDriver();  
 	      
 			

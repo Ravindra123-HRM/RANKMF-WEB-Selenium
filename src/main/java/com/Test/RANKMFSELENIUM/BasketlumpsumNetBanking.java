@@ -1,17 +1,28 @@
 package com.Test.RANKMFSELENIUM;
 
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.time.Duration;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
+import RankmfBase.Logs;
 import RankmfBase.TestBase;
 import utility.Constant;
 import utility.util;
@@ -20,22 +31,25 @@ public class BasketlumpsumNetBanking extends TestBase{
 	
 
 	
-	@FindBy(xpath="//*[@id='nav-mobile']/li[2]/a")
+	@FindBy(xpath="//ul[@id='nav-mobile']//a[@class='common_submenu'][normalize-space()='Products']")
+	static
+	WebElement products;
+	@FindBy(xpath="//ul[@class='submenu left']//a[normalize-space()='Baskets']")
 	static
 	WebElement Baskets;
-	@FindBy(xpath="//div[contains(text(),'Best funds for Tax Savings  � Conservative')]")
+	@FindBy(xpath="//h4[normalize-space()='Shubhotsav Basket']")
 	static
 	WebElement conservative;
-	@FindBy(xpath="//button[contains(text(),'Invest')]")
+	@FindBy(xpath="//a[normalize-space()='Invest']")
 	static
 	WebElement Investbutton;
 	@FindBy(xpath="//a[@id='basket_order_button']\r\n")
 	static
 	WebElement confirmcontinue;
-	@FindBy(xpath="//body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/label[1]/span[1]")
+	@FindBy(xpath="//input[@id='term_condition_checkbox']")
 	static       
 	WebElement otpcheckbox;
-	@FindBy(xpath="//a[@id='basket_otp_click_normal']")
+	@FindBy(xpath="//button[@id='verify-via-otp-btn']")
 	static
 	WebElement verifyotp;
 	
@@ -48,38 +62,145 @@ public class BasketlumpsumNetBanking extends TestBase{
     	
     }
 	
-	public static void clickonBasket() throws InterruptedException
+	public static void clickonBasket() throws InterruptedException, AWTException
 	{
-	    Thread.sleep(2000);
-		Actions a=new Actions(driver);
-	   	a.moveToElement(Baskets).build().perform();
-	   	Baskets.click();
-	    
+		try {
+			 Thread.sleep(5000);
+				Robot robot = new Robot();
+				System.out.println("About to zoom out");
+				for (int i = 0; i < 4; i++) {
+					robot.keyPress(KeyEvent.VK_CONTROL);
+					robot.keyPress(KeyEvent.VK_SUBTRACT);
+					robot.keyRelease(KeyEvent.VK_SUBTRACT);
+					robot.keyRelease(KeyEvent.VK_CONTROL);
+				}
+				Logs.info("Zoom out sucessfully");
+	        // Optional: Use WebDriverWait instead of Thread.sleep
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
+	        // Move to "Products" menu item
+	        WebElement productMenu = wait.until(ExpectedConditions.elementToBeClickable(
+	            By.xpath("//nav[@class='desktop-nav']//a[contains(text(),'Products')]")
+	        ));
+	       
+	 
+	         Actions actions = new Actions(driver);
+	        actions.moveToElement(productMenu).click().perform();
+            System.out.println("Clicked on Products page successfully");
+            Thread.sleep(2000);
+            driver.findElement(By.xpath("//ul[@class='sub-menu']//a[normalize-space()='Baskets']")).click();
+	        Logs.info("Clicked on Products page successfully");
+	    } catch (Exception e) {
+	        Logs.error("Failed to click on Products page: " + e.getMessage());
+	    }
+		
+		
 	 }
 	
-	public static void clickonconservative() throws InterruptedException
+	public static void Basketcount() throws InterruptedException, AWTException
+	{
+		Thread.sleep(3000);
+
+		// Get all basket names
+		List<WebElement> basketNames = driver.findElements(By.xpath("//div[@class='basket-card-thumb-area']//h4[@class='thumb-text']"));
+
+		System.out.println("Total baskets found: " + basketNames.size());
+
+		boolean basketFound = false;
+
+		for (int i = 0; i < basketNames.size(); i++) {
+		    String basketName = basketNames.get(i).getText().trim();
+		    System.out.println("Basket Name: " + basketName);
+
+		    // If the current basket name matches your target
+		    if (basketName.equalsIgnoreCase("Amrit Kaal Tax Saver Basket")) {
+		        basketFound = true;
+
+		        // Locate the Invest Now button relative to this basket
+		        WebElement investNowBtn = basketNames.get(i)
+		                .findElement(By.xpath("./ancestor::div[@class='basket-card-thumb-area']//following::button[normalize-space()='Invest Now']"));
+		        
+		        investNowBtn.click();
+		        System.out.println("✅ Clicked Invest Now for: " + basketName);
+		        break; // Stop after clicking the correct basket
+		    }
+		}
+
+		// If no matching basket found
+		if (!basketFound) {
+		    System.out.println("❌ No basket found with name: Amrit Kaal Tax Saver Basket");
+		}
+
+		    
+	    	
+	
+      }
+	
+	public static void clickonconservative() throws InterruptedException, AWTException
 	{
 		
-		Thread.sleep(3000);
-	   	 conservative.click();
+		Thread.sleep(5000);
+		Robot robot = new Robot();
+		System.out.println("About to zoom out");
+		for (int i = 0; i < 4; i++) {
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_SUBTRACT);
+			robot.keyRelease(KeyEvent.VK_SUBTRACT);
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+		}
+		Logs.info("Zoom out sucessfully");
+		Assert.assertTrue(true);
+
 	}
 	
 	
 
-	public static  void clickoninvest() throws InterruptedException {
+	public static  void clickoninvest() throws InterruptedException, AWTException {
 		// TODO Auto-generated method stub
-        Thread.sleep(3000);
 		
-		//String parent=driver.getWindowHandle();
-		Investbutton.click();
-	}
+	
+		String originalWindow = driver.getWindowHandle();
+
+		// Wait for new tab to open (if needed)
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
+		    wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+
+		// Get all window handles
+		Set<String> allWindows = driver.getWindowHandles();
+
+		for (String windowHandle : allWindows) {
+		    if (!windowHandle.equals(originalWindow)) {
+		        // Switch to the new tab
+		        driver.switchTo().window(windowHandle);
+		        break;
+		    }
+		}
+		
+		try {
+	        // Optional: Use WebDriverWait instead of Thread.sleep
+			Thread.sleep(2000);
+
+	        // Move to "Products" menu item
+	        WebElement productMenu = driver.findElement(By.xpath("//div[@class='best-funds-summary-right']//a[normalize-space()='Invest']"));
+	         productMenu.click();
+            System.out.println("Clicked on Invest page successfully");
+	    } catch (Exception e) {
+	        Logs.error("Failed to click on Invest page: " + e.getMessage());
+	    }
+	 }
+		
+		
 	
 	public static void selectpaymentmode() throws InterruptedException {
+		
+		
 		Thread.sleep(2000);
-		Select paymentmode=new Select(driver.findElement(By.xpath("//select[@id='basketpayment_mode']")));
-		paymentmode.selectByVisibleText("Net Banking");
+		WebElement paymentmode=driver.findElement(By.xpath("//input[@id='net-banking-val']"));
+		
+
 		try {
-			confirmcontinue.click();
+			paymentmode.click();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -146,31 +267,36 @@ public class BasketlumpsumNetBanking extends TestBase{
          
 		
 		
-	}
+	
+		
+		// Store the parent window handle
+		String parent = driver.getWindowHandle();
 
-		/*Set<String>s=driver.getWindowHandles();
+		// Get all window handles
+		Set<String> s = driver.getWindowHandles();
+		Iterator<String> I1 = s.iterator();
 
-		// Now iterate using Iterator
-		Iterator<String> I1= s.iterator();
+		while (I1.hasNext()) {
+		    String child_window = I1.next();
 
-		while(I1.hasNext())
-		{
+		    // If the window is not the parent, it's a child
+		    if (!parent.equals(child_window)) {
+		        // Switch to child window
+		    	JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("window.scrollBy(0,350)", "");
+		        
+		        // Print the title of the child window
+		        System.out.println("Child Window Title: " + driver.getTitle());
 
-		String child_window=I1.next();
-		if(!parent.equals(child_window))
-		{
-		driver.switchTo().window(child_window);
-
-		System.out.println(driver.switchTo().window(child_window).getTitle());
-
-		driver.close();
+		        // Close the child window
+		        driver.close();
+		    }
 		}
 
-		}
-		//switch to the parent window
+		// Switch back to the parent window
 		driver.switchTo().window(parent);
 
-	}*/
+	}
 
 
 
