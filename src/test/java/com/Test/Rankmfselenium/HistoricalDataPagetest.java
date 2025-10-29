@@ -1,7 +1,10 @@
 package com.Test.Rankmfselenium;
 
+<<<<<<< HEAD
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+=======
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 import java.io.FileInputStream;
 import java.util.Properties;
 
@@ -20,7 +23,11 @@ public class HistoricalDataPagetest extends TestBase {
 	public  void SetInitialization() throws Exception
 	{
 		pro=new Properties();
+<<<<<<< HEAD
 		FileInputStream fis=new FileInputStream("C:\\Users\\ravindra.chavan\\Downloads\\RankmfwebApplication\\src\\main\\java\\RankmfBase\\configproperties");
+=======
+		FileInputStream fis=new FileInputStream("C:\\Users\\samco\\eclipse-workspace\\RANKMFSELENIUM\\src\\main\\java\\RankmfBase\\configproperties");
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 		
 		pro.load(fis);
 		
@@ -28,7 +35,11 @@ public class HistoricalDataPagetest extends TestBase {
 		
 		if(Browsername.equals("chromedriver"))
 		{
+<<<<<<< HEAD
 			System.setProperty("webdriver.chrome.driver","C:\\Users\\ravindra.chavan\\Downloads\\RankmfwebApplication\\chromedriver-win64\\chromedriver.exe");
+=======
+			System.setProperty("webdriver.chrome.driver","C:\\Users\\samco\\eclipse-workspace\\RankmfwebApplication\\chromedriver116\\chromedriver-win32\\chromedriver.exe");
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 	       driver = new ChromeDriver();  
 	      
 			

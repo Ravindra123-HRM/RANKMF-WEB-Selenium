@@ -41,7 +41,11 @@ public class PartnerTestBase {
 			public static   WebDriver initialization() throws Exception
 			{
 				pro=new Properties();
+<<<<<<< HEAD
 				FileInputStream fis=new FileInputStream("C:\\Users\\ravindra.chavan\\Downloads\\RankmfwebApplication\\src\\main\\java\\RankmfBase\\configproperties");
+=======
+				FileInputStream fis=new FileInputStream("C:\\Users\\ravindra.chavan\\eclipse\\RankmfwebApplication\\src\\main\\java\\RankmfBase\\configproperties");
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 				
 				pro.load(fis);
 				
@@ -49,7 +53,11 @@ public class PartnerTestBase {
 				
 				if(Browsername.equals("chromedriver"))
 				{
+<<<<<<< HEAD
 					System.setProperty("webdriver.chrome.driver","C:\\Users\\ravindra.chavan\\Downloads\\RankmfwebApplication\\chromedriver-win64\\chromedriver.exe");
+=======
+					System.setProperty("webdriver.chrome.driver","C:\\Users\\ravindra.chavan\\eclipse\\RankmfwebApplication\\chromedriver-win64\\chromedriver.exe");
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 			       driver = new ChromeDriver();  
 			      
 					

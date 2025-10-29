@@ -5565,6 +5565,7 @@ Session ID: bef5855da52750f9dde67d0e00866259
 2025-10-13 17:42:26,955 [main] INFO org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.EmailableReporter2@c6e0f32: 15 ms
 2025-10-13 17:42:26,968 [main] INFO org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.JUnitReportReporter@4a68135e: 12 ms
 2025-10-13 17:42:26,969 [main] INFO org.testng.internal.Utils - [TestNG] Time taken by org.testng.internal.ExitCodeListener@46678e49: 0 ms
+<<<<<<< HEAD
 2025-10-14 15:48:54,105 [main] INFO org.apache.commons.logging.Log - Click on sign button
 2025-10-14 15:48:54,177 [main] INFO org.apache.commons.logging.Log - Enter Username
 2025-10-14 15:48:54,248 [main] INFO org.apache.commons.logging.Log - Enter Password
@@ -7250,3 +7251,5 @@ Session ID: 5599ffb7bd94ea1d36ee4bea2e36f36e
 2025-10-29 15:50:56,975 [main] INFO org.apache.commons.logging.Log - Starting test: ClickonVerifyOTP
 2025-10-29 15:50:59,082 [main] INFO org.apache.commons.logging.Log - PASS: ClickonVerifyOTP
 2025-10-29 15:50:59,085 [main] INFO org.apache.commons.logging.Log - Starting test: enterotpnum
+=======
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6

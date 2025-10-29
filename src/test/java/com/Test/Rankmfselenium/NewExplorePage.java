@@ -89,6 +89,7 @@ public class NewExplorePage extends TestBase {
 					
 				}
 			  }
+<<<<<<< HEAD
 		
 		 Thread.sleep(20000);
 	        WebElement Addtocart = driver.findElement(By.xpath("//button[@id='add-btn-lumpsum']"));
@@ -106,6 +107,14 @@ public class NewExplorePage extends TestBase {
 			    Logs.error("Unable to find or click Proceed button: " + e.getMessage());
 			}
 	
+=======
+				
+		Thread.sleep(20000);
+		WebElement Addtocart = driver.findElement(By.xpath("//button[@id='add-btn-lumpsum']"));
+		Addtocart.click();
+		Logs.info("Add to cart sucessfully");
+		
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 	}
 		
 	
@@ -141,6 +150,7 @@ public class NewExplorePage extends TestBase {
 					
 				}
 			  }
+<<<<<<< HEAD
 	   
          Thread.sleep(20000);
         WebElement Addtocart = driver.findElement(By.xpath("//button[@id='add-btn-lumpsum']"));
@@ -157,6 +167,21 @@ public class NewExplorePage extends TestBase {
 		} catch (Exception e) {
 		    Logs.error("Unable to find or click Proceed button: " + e.getMessage());
 		}
+=======
+	    
+	
+        
+        waitForNextPage(driver, By.xpath("//button[@id='add-btn-lumpsum']"));
+         Thread.sleep(2000);
+        WebElement Addtocart = driver.findElement(By.xpath("//button[@id='add-btn-lumpsum']"));
+		Addtocart.click();
+		Logs.info("Add to cart sucessfully");
+		Thread.sleep(2000);
+	    WebElement proceed = driver.findElement(By.xpath("//a[contains(text(),'Proceed')]"));
+	    js.executeScript("arguments[0].click();", proceed);
+	   // proceed.click();
+	    Logs.info("click to proceed button sucessfully");
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 	   // JavascriptExecutor js = (JavascriptExecutor) driver;
 	 
 	}

@@ -90,7 +90,11 @@ public class BasketLumpsum_NEFTTest extends TestBase {
 	public static void verifybasketcount() throws InterruptedException, AWTException
 	{
 		
+<<<<<<< HEAD
 		BasketlumpsumNetBanking.Basketcount();
+=======
+		//BasketlumpsumNetBanking.clickonconservative();
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 		
 	
 	}
@@ -100,7 +104,7 @@ public class BasketLumpsum_NEFTTest extends TestBase {
 	{
 		
 		
-		BasketlumpsumNetBanking.clickoninvest();
+		//BasketlumpsumNetBanking.clickoninvest();
 	
 	}
 	@Test(groups= {"Regression"},dependsOnMethods= {"Clickoninvest"})
@@ -122,7 +126,11 @@ public class BasketLumpsum_NEFTTest extends TestBase {
 	{
 		
 		
+<<<<<<< HEAD
 	BasketlumpsumNetBanking.clickonVerifyOTP();
+=======
+	//	BasketlumpsumNetBanking.clickonVerifyOTP();
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 
 	
 	

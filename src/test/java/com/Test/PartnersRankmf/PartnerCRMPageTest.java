@@ -1,7 +1,10 @@
 package com.Test.PartnersRankmf;
 
+<<<<<<< HEAD
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+=======
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 

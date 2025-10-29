@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+<<<<<<< HEAD
  <listeners>
 <listener class-name="RankmfBase.Listeners"/>
 <listener class-name="RankmfBase.DelayBetweenTests" />
@@ -16,5 +17,29 @@
       <class name="com.Test.PartnersRankmf.Partners_ActiveRateCardTest"/>
       <class name="com.Test.PartnersRankmf.PartnerCRMPageTest"/>
       </classes>
+=======
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.Test.Rankmfselenium.ExploreNewPageTest"/>
+      <class name="com.Test.Rankmfselenium.BasketSipOrderTest"/>
+      <class name="com.Test.Rankmfselenium.HistoricalDataPagetest"/>
+      <class name="com.Test.PartnersRankmf.PartnerCRMPageTest"/>
+      <class name="com.Test.Rankmfselenium.NormalSiporderTest"/>
+      <class name="com.Test.Rankmfselenium.NSEDownloadTest"/>
+      <class name="com.Test.Rankmfselenium.Timer_STPTest"/>
+      <class name="com.Test.Rankmfselenium.Normal_lumpsumNetbankingTest"/>
+      <class name="com.Test.PartnersRankmf.Partners_ActiveRateCardTest"/>
+      <class name="com.Test.Rankmfselenium.BasketLumpsum_NEFTTest"/>
+      <class name="com.Test.Rankmfselenium.NormalSmartsiporderTest"/>
+      <class name="com.Test.PartnersRankmf.PartnerDashbaordPageTest"/>
+      <class name="com.Test.Rankmfselenium.Samcopagetest"/>
+      <class name="com.Test.Rankmfselenium.Basketsmartswitchportfolio"/>
+      <class name="com.Test.Rankmfselenium.Email_sendTest"/>
+      <class name="com.Test.Rankmfselenium.SearchRankmfSchemelistTest"/>
+      <class name="com.Test.Rankmfselenium.BasketlumpsumOrderNetBankingTest"/>
+      <class name="com.Test.Rankmfselenium.StepUpSipTest"/>
+      <class name="com.Test.Rankmfselenium.TERA_DATATEST"/>
+    </classes>
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
   </test> <!-- Test -->
 </suite> <!-- Suite -->

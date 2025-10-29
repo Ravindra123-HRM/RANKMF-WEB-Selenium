@@ -1,5 +1,6 @@
 package com.Test.Rankmfselenium;
 
+<<<<<<< HEAD
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
@@ -7,6 +8,11 @@ import java.awt.AWTException;
 
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
+=======
+import java.awt.AWTException;
+
+import org.apache.log4j.PropertyConfigurator;
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -30,14 +36,23 @@ public class BasketlumpsumOrderNetBankingTest extends TestBase  {
  static LoginPage lp;
  static BasketlumpsumNetBanking bln;
  static BasketAction ba;
+<<<<<<< HEAD
 static BasketLumpsum_NEFTRTGS NEFT;
+=======
+ static BasketSipOrder bso;
+ static BasketLumpsum_NEFTRTGS NEFT;
+ static BasketlumpsumNetBanking bln;
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 	//static Basketsiporder bso;
 	
 	@BeforeClass
 	public static void SetInitialization() throws Exception
 	{
 		//WebDriverManager.chromedriver().setup();
+<<<<<<< HEAD
 		
+=======
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 	driver=initialization();
 	lp=new LoginPage(driver);
     bln=new BasketlumpsumNetBanking(driver);
@@ -66,8 +81,12 @@ static BasketLumpsum_NEFTRTGS NEFT;
 		
 	
 	}
+<<<<<<< HEAD
 	@Test(groups= {"Regression"},dependsOnMethods= {"clickonbasketpage"})
 	public static void checkbasketcount() throws InterruptedException, AWTException
+=======
+	@Test(groups= {"Regression"},dependsOnMethods= {"clickonSigninPage"})
+	public static void checkbasketcount() throws InterruptedException
 	{
 		
 		BasketlumpsumNetBanking.Basketcount();
@@ -75,7 +94,22 @@ static BasketLumpsum_NEFTRTGS NEFT;
 	
 	}
 	
+	
 	@Test(groups= {"Regression"},dependsOnMethods= {"checkbasketcount"})
+	public static void Clickonconservative() throws InterruptedException, AWTException
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
+	{
+		
+		BasketlumpsumNetBanking.Basketcount();
+		
+	
+	}
+	
+<<<<<<< HEAD
+	@Test(groups= {"Regression"},dependsOnMethods= {"checkbasketcount"})
+=======
+	@Test(groups= {"Regression"},dependsOnMethods= {"Clickonconservative"})
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 	public static void clickoninvest() throws InterruptedException, AWTException
 	{
 		

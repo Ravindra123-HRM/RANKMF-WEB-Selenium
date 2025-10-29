@@ -18,7 +18,11 @@ public class Constant {
 	
 	public static final String AMC="Axis";
 	public static final String DATE="30-06-2023";
+<<<<<<< HEAD
 	public static final String AMOUNT="5000";
+=======
+	public static final String AMOUNT="100";
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 	
 	public static final String clientuser="ravindra.chavan@rankmf.com";
 	public static final String starpassword="rankmf@089";

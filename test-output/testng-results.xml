@@ -2,7 +2,11 @@
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2025-10-29T15:37:55 IST" name="Default suite" finished-at="2025-10-29T15:40:52 IST" duration-ms="176953">
+=======
+  <suite started-at="2025-10-13T17:40:00 IST" name="Default suite" finished-at="2025-10-13T17:42:26 IST" duration-ms="146087">
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
     <groups>
       <group name="Regression">
         <method signature="ExploreNewPageTest.clickonSigninPage()[pri:0, instance:com.Test.Rankmfselenium.ExploreNewPageTest@2e6a8155]" name="clickonSigninPage" class="com.Test.Rankmfselenium.ExploreNewPageTest"/>
@@ -13,6 +17,7 @@
         <method signature="ExploreNewPageTest.enterotpnum()[pri:0, instance:com.Test.Rankmfselenium.ExploreNewPageTest@2e6a8155]" name="enterotpnum" class="com.Test.Rankmfselenium.ExploreNewPageTest"/>
       </group> <!-- Regression -->
     </groups>
+<<<<<<< HEAD
     <test started-at="2025-10-29T15:37:55 IST" name="Default test" finished-at="2025-10-29T15:40:52 IST" duration-ms="176953">
       <class name="com.Test.Rankmfselenium.ExploreNewPageTest">
         <test-method is-config="true" signature="SetInitialization()[pri:0, instance:com.Test.Rankmfselenium.ExploreNewPageTest@2e6a8155]" started-at="2025-10-29T15:37:55 IST" name="SetInitialization" finished-at="2025-10-29T15:37:58 IST" duration-ms="2908" status="PASS">
@@ -40,6 +45,35 @@
           </reporter-output>
         </test-method> <!-- Review_PaymentPage -->
         <test-method signature="enterotpnum()[pri:0, instance:com.Test.Rankmfselenium.ExploreNewPageTest@2e6a8155]" started-at="2025-10-29T15:40:06 IST" name="enterotpnum" finished-at="2025-10-29T15:40:52 IST" depends-on-methods="com.Test.Rankmfselenium.ExploreNewPageTest.Review_PaymentPage" duration-ms="46230" status="PASS">
+=======
+    <test started-at="2025-10-13T17:40:00 IST" name="Default test" finished-at="2025-10-13T17:42:26 IST" duration-ms="146087">
+      <class name="com.Test.Rankmfselenium.ExploreNewPageTest">
+        <test-method is-config="true" signature="SetInitialization()[pri:0, instance:com.Test.Rankmfselenium.ExploreNewPageTest@2e6a8155]" started-at="2025-10-13T17:40:00 IST" name="SetInitialization" finished-at="2025-10-13T17:40:03 IST" duration-ms="3171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetInitialization -->
+        <test-method signature="clickonSigninPage()[pri:0, instance:com.Test.Rankmfselenium.ExploreNewPageTest@2e6a8155]" started-at="2025-10-13T17:40:03 IST" name="clickonSigninPage" finished-at="2025-10-13T17:40:06 IST" duration-ms="2742" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickonSigninPage -->
+        <test-method signature="Click_Explorerankmf()[pri:0, instance:com.Test.Rankmfselenium.ExploreNewPageTest@2e6a8155]" started-at="2025-10-13T17:40:06 IST" name="Click_Explorerankmf" finished-at="2025-10-13T17:40:12 IST" depends-on-methods="com.Test.Rankmfselenium.ExploreNewPageTest.clickonSigninPage" duration-ms="5903" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Click_Explorerankmf -->
+        <test-method signature="Click_Filter()[pri:0, instance:com.Test.Rankmfselenium.ExploreNewPageTest@2e6a8155]" started-at="2025-10-13T17:40:12 IST" name="Click_Filter" finished-at="2025-10-13T17:40:42 IST" depends-on-methods="com.Test.Rankmfselenium.ExploreNewPageTest.Click_Explorerankmf" duration-ms="30133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Click_Filter -->
+        <test-method signature="Click_Myinvestment()[pri:0, instance:com.Test.Rankmfselenium.ExploreNewPageTest@2e6a8155]" started-at="2025-10-13T17:40:42 IST" name="Click_Myinvestment" finished-at="2025-10-13T17:41:49 IST" depends-on-methods="com.Test.Rankmfselenium.ExploreNewPageTest.Click_Filter" duration-ms="66890" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Click_Myinvestment -->
+        <test-method signature="Review_PaymentPage()[pri:0, instance:com.Test.Rankmfselenium.ExploreNewPageTest@2e6a8155]" started-at="2025-10-13T17:41:49 IST" name="Review_PaymentPage" finished-at="2025-10-13T17:41:59 IST" depends-on-methods="com.Test.Rankmfselenium.ExploreNewPageTest.Click_Myinvestment" duration-ms="9557" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Review_PaymentPage -->
+        <test-method signature="enterotpnum()[pri:0, instance:com.Test.Rankmfselenium.ExploreNewPageTest@2e6a8155]" started-at="2025-10-13T17:41:59 IST" name="enterotpnum" finished-at="2025-10-13T17:42:26 IST" depends-on-methods="com.Test.Rankmfselenium.ExploreNewPageTest.Review_PaymentPage" duration-ms="27578" status="PASS">
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterotpnum -->

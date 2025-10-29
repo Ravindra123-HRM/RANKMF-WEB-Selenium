@@ -20,7 +20,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+<<<<<<< HEAD
 import org.testng.Assert;
+=======
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 
 import RankmfBase.Logs;
 import RankmfBase.TestBase;
@@ -65,6 +68,7 @@ public class BasketlumpsumNetBanking extends TestBase{
 	public static void clickonBasket() throws InterruptedException, AWTException
 	{
 		try {
+<<<<<<< HEAD
 			 Thread.sleep(5000);
 				Robot robot = new Robot();
 				System.out.println("About to zoom out");
@@ -75,6 +79,8 @@ public class BasketlumpsumNetBanking extends TestBase{
 					robot.keyRelease(KeyEvent.VK_CONTROL);
 				}
 				Logs.info("Zoom out sucessfully");
+=======
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 	        // Optional: Use WebDriverWait instead of Thread.sleep
 	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
@@ -82,7 +88,10 @@ public class BasketlumpsumNetBanking extends TestBase{
 	        WebElement productMenu = wait.until(ExpectedConditions.elementToBeClickable(
 	            By.xpath("//nav[@class='desktop-nav']//a[contains(text(),'Products')]")
 	        ));
+<<<<<<< HEAD
 	       
+=======
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 	 
 	         Actions actions = new Actions(driver);
 	        actions.moveToElement(productMenu).click().perform();
@@ -93,6 +102,7 @@ public class BasketlumpsumNetBanking extends TestBase{
 	    } catch (Exception e) {
 	        Logs.error("Failed to click on Products page: " + e.getMessage());
 	    }
+<<<<<<< HEAD
 		
 		
 	 }
@@ -133,24 +143,61 @@ public class BasketlumpsumNetBanking extends TestBase{
 
 		    
 	    	
+=======
+	 }
+	
+	public static void Basketcount() throws InterruptedException
+	{
+		Thread.sleep(7000);
+		  List<WebElement> name = driver.findElements(By.xpath("//div[@class='basket-card-thumb-area']//h4[@class='thumb-text']"));
+		  int names = driver.findElements(By.xpath("//div[@class='basket-card-thumb-area']//h4[@class='thumb-text']")).size();
+ 
+		     int basket=name.size();
+		     for(int i=0;i<basket;i++)
+		     {
+		    	 
+		    	 String basketname=name.get(i).getText();
+		    	 System.out.println(basketname);
+		    	 
+		     }
+		    
+		    
+	    	 System.out.println("All bakset count"+names);
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 	
       }
 	
 	public static void clickonconservative() throws InterruptedException, AWTException
 	{
 		
+<<<<<<< HEAD
 		Thread.sleep(5000);
 		Robot robot = new Robot();
 		System.out.println("About to zoom out");
 		for (int i = 0; i < 4; i++) {
+=======
+		Thread.sleep(3000);
+	   	 conservative.click();
+	 	Thread.sleep(3000);
+		System.out.println("zooming");
+		
+		Robot robot = new Robot();
+		System.out.println("About to zoom in");
+		for (int i = 0; i < 4; i++) {			
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 			robot.keyPress(KeyEvent.VK_CONTROL);
 			robot.keyPress(KeyEvent.VK_SUBTRACT);
 			robot.keyRelease(KeyEvent.VK_SUBTRACT);
 			robot.keyRelease(KeyEvent.VK_CONTROL);
+<<<<<<< HEAD
 		}
 		Logs.info("Zoom out sucessfully");
 		Assert.assertTrue(true);
 
+=======
+	  }
+	 
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 	}
 	
 	
@@ -196,11 +243,21 @@ public class BasketlumpsumNetBanking extends TestBase{
 		
 		
 		Thread.sleep(2000);
+<<<<<<< HEAD
 		WebElement paymentmode=driver.findElement(By.xpath("//input[@id='net-banking-val']"));
 		
 
 		try {
 			paymentmode.click();
+=======
+		WebElement paymentmode=driver.findElement(By.xpath("//label[normalize-space()='NEFT']"));
+		WebElement UTRNO=driver.findElement(By.xpath("//input[@id='utr_no_input']"));
+
+		try {
+			paymentmode.click();
+			UTRNO.sendKeys("TESST");
+			//input[@id='utr_no_input']
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

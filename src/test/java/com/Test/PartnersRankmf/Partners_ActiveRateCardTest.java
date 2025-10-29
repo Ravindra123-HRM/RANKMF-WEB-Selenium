@@ -1,9 +1,12 @@
 package com.Test.PartnersRankmf;
 
+<<<<<<< HEAD
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+=======
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 import java.awt.AWTException;
 import java.util.Properties;
 
@@ -69,7 +72,11 @@ public class Partners_ActiveRateCardTest extends PartnerTestBase {
 	
 	}
 	@Test(groups= {"Regression"},dependsOnMethods= {"DashbaordPage"})
+<<<<<<< HEAD
 	public static void Brokeraged() throws InterruptedException
+=======
+	public static void Brokerage() throws InterruptedException
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 	{
 		
 		Partners_ActiveRateCard.Brokerage();
@@ -84,7 +91,11 @@ public class Partners_ActiveRateCardTest extends PartnerTestBase {
 		
 	
 	}*/
+<<<<<<< HEAD
 	@Test(groups= {"Regression"},dependsOnMethods= {"Brokeraged"})
+=======
+	@Test(groups= {"Regression"},dependsOnMethods= {"Brokerage"})
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 	public static void Search_AMC() throws InterruptedException, AWTException
 	{
 		
@@ -100,6 +111,7 @@ public class Partners_ActiveRateCardTest extends PartnerTestBase {
 		Partners_ActiveRateCard.investAmount();
 	
 	}
+<<<<<<< HEAD
 	/*@Test(groups= {"Regression"},dependsOnMethods= {"AmountInvest"})
 	public static void Brokerages() throws InterruptedException, AWTException
 	{
@@ -114,6 +126,16 @@ public class Partners_ActiveRateCardTest extends PartnerTestBase {
 		Partners_ActiveRateCard.SchemeTypeAndSubSchemeType();
 	
 	}*/
+=======
+	@Test(groups= {"Regression"},dependsOnMethods= {"AmountInvest"})
+	public static void SchemeType_SubSchemeType() throws InterruptedException, AWTException
+	{
+		Partners_ActiveRateCardTest.Brokerage();
+		//Partners_ActiveRateCardTest.Reports();
+		Partners_ActiveRateCard.SchemeTypeAndSubSchemeType();
+	
+	}
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 
 	
 

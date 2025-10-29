@@ -108,6 +108,7 @@ public class Partners_ActiveRateCard extends PartnerTestBase {
 	}
 	public static void SearchAMC() throws InterruptedException
 	{
+<<<<<<< HEAD
        
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,350)", "");
@@ -119,17 +120,49 @@ public class Partners_ActiveRateCard extends PartnerTestBase {
 		WebElement investbutton=driver.findElement(By.xpath("//div[@id='rate-card-container-active']//div[2]//button[@class='btn invent-now']"));
 		investbutton.click();
 		Logs.info("Clicked on Invest button successfully");
+=======
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,250)", "");
+		// WebDriverWait wt = new WebDriverWait(driver,6);
+	      // elementToBeClickable expected criteria
+	    
+		//Thread.sleep(3000);
+		//WebElement mututalname=driver.findElement(By.xpath("//label[normalize-space()='Axis Mutual Fund']"));
+		//wt.until(ExpectedConditions.elementToBeClickable (mututalname));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	    WebElement  element = wait.until(ExpectedConditions.presenceOfElementLocated((By.xpath("//label[normalize-space()='Axis Mutual Fund']"))));
+       element.click();
+       Thread.sleep(2000);
+       WebElement search=driver.findElement(By.xpath("//input[@id='scheme-search']"));
+        search.sendKeys("Axis Value Fund Regular Growth");
+        WebDriverWait wt = new WebDriverWait(driver, Duration.ofSeconds(30));
+	    WebElement  element1 = wait.until(ExpectedConditions.visibilityOf((search)));
+	    search.sendKeys(Keys.ENTER);
+		String schemename=driver.findElement(By.xpath("//div[@class='name-group']//h4[contains(text(),'Axis Value Fund Regular Growth')]")).getText();
+		System.out.println(schemename);
+		Thread.sleep(2000);
+		WebElement invest=driver.findElement(By.xpath("//div[@class='name-group']//h4[contains(text(),'Axis Value Fund Regular Growth')]//following::button[1]"));
+		//WebDriverWait wait = new WebDriverWait (driver, 10);
+	    Actions a1=new Actions(driver);
+		a1.moveToElement(invest).build();
+		invest.click();
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 	}
 
 	public static void investAmount() throws InterruptedException, AWTException
 	{
+<<<<<<< HEAD
 		// Robot robots = new Robot();
+=======
+		 Robot robots = new Robot();
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 		String investpage=driver.getCurrentUrl();
 		System.out.println("invest page "+investpage);
 	
 		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
 	    
 	    driver.switchTo().window(tabs.get(1));
+<<<<<<< HEAD
 	    Thread.sleep(2000);
 	    WebElement search=driver.findElement(By.xpath("//input[@type='search']"));
 	    search.sendKeys("RR34434");
@@ -159,13 +192,43 @@ public class Partners_ActiveRateCard extends PartnerTestBase {
 		 Actions a=new Actions(driver);
 		 a.moveToElement(initiatetransaction).build();
 		 initiatetransaction.click();
+=======
+		 // Robot robot = new Robot();
+		  robots.keyPress(KeyEvent.VK_PAGE_DOWN);
+		  
+		  for(int i=5;i<=7;i++)
+		  {
+
+		Thread.sleep(2000);
+		//j.executeScript("arguments[0].click();", l);
+		WebElement check=driver.findElement(By.xpath("//*[@id='investmentClientTable']/tbody/tr["+i+"]/td[1]/label/span"));
+		check.click();
+	
+		
+		WebElement Amount=driver.findElement(By.xpath("//tbody//tr["+i+"]//td[6]//input[@class='investment-amount']"));
+		Amount.click();
+	     Amount.sendKeys(Constant.AMOUNT);
+		 }
+	     
+		 // Robot robots = new Robot();
+		  robots.keyPress(KeyEvent.VK_PAGE_UP);
+	     Thread.sleep(2000);
+	     WebElement initiatetransaction=driver.findElement(By.xpath("//button[@id='investmentClientEmailBtn']"));
+		Actions a=new Actions(driver);
+		a.moveToElement(initiatetransaction).build();
+		initiatetransaction.click();
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 		
 		Thread.sleep(2000);
 		WebElement initatetransaction=driver.findElement(By.xpath("//button[@id='confirm-btn']"));
 		initatetransaction.click();
 		// Robot robo = new Robot();
 		
+<<<<<<< HEAD
 		/*  System.out.println("About to zoom in");
+=======
+		  System.out.println("About to zoom in");
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 			//Robot rob = new Robot();
 			for (int i = 0; i < 3; i++) {			
 				robots.keyPress(KeyEvent.VK_CONTROL);
@@ -174,6 +237,7 @@ public class Partners_ActiveRateCard extends PartnerTestBase {
 				robots.keyRelease(KeyEvent.VK_CONTROL);
 				}
 			Thread.sleep(2000);
+<<<<<<< HEAD
 			 robots.keyPress(KeyEvent.VK_PAGE_DOWN);*/
 }
 	
@@ -227,6 +291,38 @@ public class Partners_ActiveRateCard extends PartnerTestBase {
 		WebElement initatetransaction=driver.findElement(By.xpath("//button[@id='confirm-btn']"));
 		initatetransaction.click();
 		 
+=======
+			 robots.keyPress(KeyEvent.VK_PAGE_DOWN);
+	}
+	
+	public static void SchemeTypeAndSubSchemeType() throws AWTException, InterruptedException
+	{
+		Robot robots = new Robot();
+		robots.keyPress(KeyEvent.VK_PAGE_DOWN);
+		
+		for(int i=1;i<=2;i++)
+		{
+			//Thread.sleep(2000);
+			WebElement schemetype=driver.findElement(By.xpath("//input[@id='asset"+i+"']"));
+			schemetype.click();	
+			
+			
+			//Thread.sleep(2000);
+			WebElement schemesubtype=driver.findElement(By.xpath("//input[@id='classcode"+i+"']"));
+			schemesubtype.click();	 
+			
+		}
+		
+		String schemename=driver.findElement(By.xpath("//div[@class='name-group']//h4[contains(text(),'Sundaram Medium Term Bond Fund Regular Growth')]")).getText();
+		System.out.println(schemename);
+		Thread.sleep(3000);
+		WebElement invest=driver.findElement(By.xpath("//div[@class='name-group']//h4[contains(text(),'Sundaram Medium Term Bond Fund Regular Growth')]//following::button[1]"));
+		//WebDriverWait wait = new WebDriverWait (driver, 10);
+	    Actions a=new Actions(driver);
+		a.moveToElement(invest).build();
+		invest.click();
+		Partners_ActiveRateCard.investAmount();
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
 		
 	}
 	

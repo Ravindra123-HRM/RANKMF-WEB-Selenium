@@ -3,6 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.Test.PartnersRankmf.Partners_ActiveRateCardTest">
         <methods>
           <include name="Brokerage"/>
@@ -16,6 +17,19 @@
           <include name="Brokerages"/>
         </methods>
       </class> <!-- com.Test.PartnersRankmf.Partners_ActiveRateCardTest -->
+=======
+      <class name="com.Test.Rankmfselenium.ExploreNewPageTest">
+        <methods>
+          <include name="Click_Filter"/>
+          <include name="Click_Explorerankmf"/>
+          <include name="SetInitialization"/>
+          <include name="Review_PaymentPage"/>
+          <include name="clickonSigninPage"/>
+          <include name="enterotpnum"/>
+          <include name="Click_Myinvestment"/>
+        </methods>
+      </class> <!-- com.Test.Rankmfselenium.ExploreNewPageTest -->
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

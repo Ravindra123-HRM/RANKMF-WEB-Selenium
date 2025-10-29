@@ -1344,6 +1344,7 @@
   C:\Users\ravindra.chavan\AppData\Local\Temp\testng-eclipse-1266488624\testng-customsuite.xml
 
 2025-10-13 17:40:00,663 [main] INFO  org.testng.internal.Utils - [Utils] DynamicGraphHelper.createDynamicGraph() took 5 ms.
+<<<<<<< HEAD
 2025-10-13 19:44:23,207 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
 2025-10-13 19:44:23,214 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 2 ms.
 2025-10-13 19:44:23,216 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
@@ -6923,3 +6924,5 @@
   C:\Users\ravindra.chavan\AppData\Local\Temp\testng-eclipse--2126095661\testng-customsuite.xml
 
 2025-10-29 15:37:55,811 [main] INFO  org.testng.internal.Utils - [Utils] DynamicGraphHelper.createDynamicGraph() took 5 ms.
+=======
+>>>>>>> ee410d6c12b415293c21901c1d29a1db63f6a0d6
